@@ -85,46 +85,90 @@
         box-sizing: border-box;
     }
 
-    /* 1. TOP ANNOUNCEMENT BAR */
+    /* 1. TOP ANNOUNCEMENT BAR (ROYAL TECH LUXURY) */
+    .pc-topbar,
     .pc-top-bar {
-        background: linear-gradient(90deg, #3730a3 0%, #4f46e5 50%, #7c3aed 100%) !important;
+        background: linear-gradient(90deg, #090d16 0%, #1e1b4b 35%, #312e81 70%, #090d16 100%) !important;
         color: #ffffff !important;
-        padding: 10px 0;
-        font-size: 13px;
-        font-weight: 700;
-        width: 100%;
-        overflow: hidden;
+        padding: 8px 0 !important;
+        font-size: 12.5px !important;
+        font-weight: 700 !important;
+        width: 100% !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     }
+    .pc-topbar *,
     .pc-top-bar * {
         color: #ffffff !important;
     }
+    .pc-topbar-inner,
     .pc-top-bar-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 15px;
-        flex-wrap: wrap;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 20px !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
     }
-    .pc-top-tag {
-        background: rgba(255, 255, 255, 0.25) !important;
-        color: #ffffff !important;
-        padding: 3px 12px;
-        border-radius: 50px;
-        font-weight: 900;
-        font-size: 11.5px;
-        margin-left: 8px;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
+    .pc-topbar-text,
+    .pc-top-bar-text {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        font-size: 12.5px !important;
+        color: #f1f5f9 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    .pc-topbar-text i,
+    .pc-top-bar-text i {
+        color: #f59e0b !important;
+        font-size: 13px !important;
     }
     .pc-top-links {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        font-size: 12.5px;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        font-size: 12px !important;
+        flex-shrink: 0 !important;
+    }
+    .pc-top-links a {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        color: #e2e8f0 !important;
+        text-decoration: none !important;
+        padding: 4px 12px !important;
+        border-radius: 6px !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        transition: all 0.2s ease !important;
+        font-weight: 600 !important;
+        white-space: nowrap !important;
     }
     .pc-top-links a:hover {
-        opacity: 0.85;
+        background: rgba(255, 255, 255, 0.2) !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.25) !important;
+    }
+    .pc-top-links a i {
+        color: #a5b4fc !important;
+    }
+    @media (max-width: 900px) {
+        .pc-top-links {
+            display: none !important;
+        }
+        .pc-topbar-inner,
+        .pc-top-bar-inner {
+            justify-content: center !important;
+            text-align: center !important;
+        }
+        .pc-topbar-text,
+        .pc-top-bar-text {
+            white-space: normal !important;
+            text-align: center !important;
+            font-size: 11.5px !important;
+        }
     }
 
     /* 2. EXECUTIVE LIGHT HEADER */
