@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageTitle">أقسام الهاردوير | سايبر تك PC</title>
     <meta name="description" content="تصفح أقوى تجميعات الجيمنج ولابتوبات المحترفين وكروت الشاشة وشاشات القيمنق بضمان الوكيل سنتين وشحن سريع من سايبر تك PC.">
@@ -332,6 +333,36 @@
             title: 'أحدث كروت الشاشة والمعالجات ومزودات الطاقة',
             desc: 'قطع الهاردوير الأصلية بضمان الوكيل المعتمد لترقية جهازك والحصول على أعلى معدلات الإطارات FPS وثبات تام في كسر السرعة.'
         },
+        'gpus': {
+            name: 'كروت الشاشة RTX',
+            banner: 'images/cat_banner_hardware.jpg',
+            title: 'كروت الشاشة GeForce RTX 40 & 50 Series',
+            desc: 'أحدث بطاقات الرسومات بمعمارية Ada Lovelace ودعم تقنيات تتبع الأشعة الكامل ومولد الإطارات DLSS 3.5 لأعلى أداء ممكن.'
+        },
+        'cpus': {
+            name: 'المعالجات المركزية',
+            banner: 'images/cat_banner_hardware.jpg',
+            title: 'المعالجات المركزية Intel Core i9 & AMD Ryzen',
+            desc: 'قوة معالجة خارقة لألعاب الرياضات الإلكترونية وبرامج التصميم الهندسي والمونتاج ثلاثي الأبعاد.'
+        },
+        'cooling': {
+            name: 'التبريد المائي السائل',
+            banner: 'images/pc_hero_rig_white.jpg',
+            title: 'أنظمة التبريد المائي السائل المخصص والمغلق AIO',
+            desc: 'حلول تبريد هيدروليكية احترافية تضمن درجات حرارة مثالية تحت أقصى ضغط تشغيل.'
+        },
+        'storage': {
+            name: 'ذواكر DDR5 والتخزين',
+            banner: 'images/cat_banner_hardware.jpg',
+            title: 'ذواكر DDR5 فائقة السرعة ووحدات M.2 NVMe Gen5',
+            desc: 'سرعات نقل خيالية تتجاوز 14,000MB/s وإقلاع فوري للألعاب والنظام بدون أي تأخير.'
+        },
+        'cases': {
+            name: 'صناديق الكيس ومزودات الطاقة',
+            banner: 'images/pc_hero_rig_white.jpg',
+            title: 'صناديق كيس بانورامية ومزودات طاقة معتمدة Gold & Platinum',
+            desc: 'تدفق هوائي متقدم مع واجهات زجاجية مزدوجة وإضاءة ARGB متزامنة.'
+        },
         'accessories': {
             name: 'ملحقات واكسسوارات الجيمنج',
             banner: 'images/cat_banner_accessories.jpg',
@@ -370,8 +401,8 @@
         if (target === 'monitors') {
             return pCat === 'monitors' || pCatName.includes('شاش') || pName.includes('شاش') || pName.includes('oled');
         }
-        if (target === 'hardware') {
-            return pCat === 'hardware' || pCat === 'gpus' || pCat === 'cpus' || pCatName.includes('كرت') || pCatName.includes('معالج') || pName.includes('كرت') || pName.includes('معالج') || pName.includes('rtx');
+        if (target === 'hardware' || target === 'gpus' || target === 'cpus' || target === 'cooling' || target === 'storage' || target === 'cases') {
+            return pCat === 'hardware' || pCat === 'gpus' || pCat === 'cpus' || pCat === 'cooling' || pCat === 'storage' || pCat === 'cases' || pCatName.includes('كرت') || pCatName.includes('معالج') || pName.includes('كرت') || pName.includes('معالج') || pName.includes('rtx') || pName.includes('intel') || pName.includes('asus');
         }
         if (target === 'accessories') {
             return pCat === 'accessories' || pCatName.includes('ملحق') || pCatName.includes('كيبورد') || pName.includes('كيبورد') || pName.includes('سماع') || pName.includes('ماوس');

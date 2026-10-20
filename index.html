@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سايبر تك PC | أقوى تجميعات الجيمنج وهاردوير المحترفين</title>
     <meta name="description" content="متجر سايبر تك PC الرائد في تجميعات الكمبيوتر الاحترافية، لابتوبات الجيمنج والمونتاج، الشاشات المنحنية، وكروت الشاشة الأصلية بضمان سنتين.">
@@ -68,7 +69,7 @@
                 <div class="pc-navbar-inner">
                     <ul class="pc-nav-menu">
                         <li class="pc-nav-item">
-                            <a href="#catalog" id="btnAllPcCategories" class="pc-nav-mega-btn" onclick="filterPcCategory('all')" style="background-color: #4f46e5 !important; color: #ffffff !important; min-width: 280px; justify-content: space-between; border-radius: 10px 10px 0 0;">
+                            <a href="category?cat=all" id="btnAllPcCategories" class="pc-nav-mega-btn" style="background-color: #4f46e5 !important; color: #ffffff !important; min-width: 280px; justify-content: space-between; border-radius: 10px 10px 0 0;">
                                 <span style="display:flex; align-items:center; gap:10px; color:#ffffff !important;">
                                     <i class="fa-solid fa-bars" style="color: #ffffff !important;"></i>
                                     <span style="color: #ffffff !important;">تصفح كافة الأقسام</span>
@@ -79,10 +80,10 @@
                         <li class="pc-nav-item active"><a href="#">الرئيسية</a></li>
                         <li class="pc-nav-item"><a href="#builder">بناء تجميعة مخصصة</a></li>
                         <li class="pc-nav-item"><a href="#flashDeals">عروض الهاردوير الخاطفة</a></li>
-                        <li class="pc-nav-item"><a href="#catalog" onclick="filterPcCategory('rigs')">تجميعات الجيمنج 4K</a></li>
-                        <li class="pc-nav-item"><a href="#catalog" onclick="filterPcCategory('laptops')">لابتوبات المحترفين</a></li>
-                        <li class="pc-nav-item"><a href="#catalog" onclick="filterPcCategory('monitors')">شاشات OLED منحنية</a></li>
-                        <li class="pc-nav-item"><a href="#catalog" onclick="filterPcCategory('hardware')">قطع الهاردوير والمعالجات</a></li>
+                        <li class="pc-nav-item"><a href="category?cat=rigs">تجميعات الجيمنج 4K</a></li>
+                        <li class="pc-nav-item"><a href="category?cat=laptops">لابتوبات المحترفين</a></li>
+                        <li class="pc-nav-item"><a href="category?cat=monitors">شاشات OLED منحنية</a></li>
+                        <li class="pc-nav-item"><a href="category?cat=hardware">قطع الهاردوير والمعالجات</a></li>
                     </ul>
                     <div class="pc-nav-hotline">
                         <i class="fa-solid fa-headset"></i>
@@ -105,7 +106,7 @@
                     </div>
                     <ul class="pc-wm-cat-list">
                         <li class="pc-wm-cat-item">
-                            <a href="#catalog" onclick="filterPcCategory('rigs')" class="pc-wm-cat-link">
+                            <a href="category?cat=rigs" class="pc-wm-cat-link">
                                 <div class="pc-wm-cat-left">
                                     <i class="fa-solid fa-gamepad pc-wm-cat-icon"></i>
                                     <span>تجميعات الجيمنج 4K الاحترافية</span>
@@ -114,7 +115,7 @@
                             </a>
                         </li>
                         <li class="pc-wm-cat-item">
-                            <a href="#catalog" onclick="filterPcCategory('laptops')" class="pc-wm-cat-link">
+                            <a href="category?cat=laptops" class="pc-wm-cat-link">
                                 <div class="pc-wm-cat-left">
                                     <i class="fa-solid fa-laptop pc-wm-cat-icon"></i>
                                     <span>لابتوبات الاستوديو والمونتاج</span>
@@ -123,7 +124,7 @@
                             </a>
                         </li>
                         <li class="pc-wm-cat-item">
-                            <a href="#catalog" onclick="filterPcCategory('monitors')" class="pc-wm-cat-link">
+                            <a href="category?cat=monitors" class="pc-wm-cat-link">
                                 <div class="pc-wm-cat-left">
                                     <i class="fa-solid fa-tv pc-wm-cat-icon"></i>
                                     <span>شاشات QD-OLED المنحنية 240Hz</span>
@@ -132,7 +133,7 @@
                             </a>
                         </li>
                         <li class="pc-wm-cat-item">
-                            <a href="#catalog" onclick="filterPcCategory('gpus')" class="pc-wm-cat-link">
+                            <a href="category?cat=hardware" class="pc-wm-cat-link">
                                 <div class="pc-wm-cat-left">
                                     <i class="fa-solid fa-microchip pc-wm-cat-icon"></i>
                                     <span>كروت الشاشة RTX 40 & 50 Series</span>
@@ -141,7 +142,7 @@
                             </a>
                         </li>
                         <li class="pc-wm-cat-item">
-                            <a href="#catalog" onclick="filterPcCategory('cpus')" class="pc-wm-cat-link">
+                            <a href="category?cat=hardware" class="pc-wm-cat-link">
                                 <div class="pc-wm-cat-left">
                                     <i class="fa-solid fa-memory pc-wm-cat-icon"></i>
                                     <span>المعالجات المركزية Intel & AMD</span>
@@ -150,7 +151,7 @@
                             </a>
                         </li>
                         <li class="pc-wm-cat-item">
-                            <a href="#catalog" onclick="filterPcCategory('cooling')" class="pc-wm-cat-link">
+                            <a href="category?cat=hardware" class="pc-wm-cat-link">
                                 <div class="pc-wm-cat-left">
                                     <i class="fa-solid fa-droplet pc-wm-cat-icon"></i>
                                     <span>أنظمة التبريد المائي السائل Custom</span>
@@ -159,7 +160,7 @@
                             </a>
                         </li>
                         <li class="pc-wm-cat-item">
-                            <a href="#catalog" onclick="filterPcCategory('storage')" class="pc-wm-cat-link">
+                            <a href="category?cat=hardware" class="pc-wm-cat-link">
                                 <div class="pc-wm-cat-left">
                                     <i class="fa-solid fa-hard-drive pc-wm-cat-icon"></i>
                                     <span>ذواكر DDR5 ووحدات NVMe Gen5</span>
@@ -168,7 +169,7 @@
                             </a>
                         </li>
                         <li class="pc-wm-cat-item">
-                            <a href="#catalog" onclick="filterPcCategory('cases')" class="pc-wm-cat-link">
+                            <a href="category?cat=hardware" class="pc-wm-cat-link">
                                 <div class="pc-wm-cat-left">
                                     <i class="fa-solid fa-server pc-wm-cat-icon"></i>
                                     <span>صناديق الكيس ومزودات الطاقة Gold</span>
@@ -177,7 +178,7 @@
                             </a>
                         </li>
                         <li class="pc-wm-cat-item">
-                            <a href="#catalog" onclick="filterPcCategory('accessories')" class="pc-wm-cat-link">
+                            <a href="category?cat=accessories" class="pc-wm-cat-link">
                                 <div class="pc-wm-cat-left">
                                     <i class="fa-solid fa-headphones pc-wm-cat-icon"></i>
                                     <span>ملحقات واكسسوارات الألعاب الاحترافية</span>
@@ -489,48 +490,48 @@
                     <span class="pc-section-subtitle">تصنيفات العتاد الاحترافي</span>
                     <h2 class="pc-section-title">أقسام أجهزة الكمبيوتر والهاردوير</h2>
                 </div>
-                <a href="#catalog" class="btn-pc-secondary" style="padding: 10px 20px; font-size: 13.5px;" onclick="filterPcCategory('all')">
+                <a href="category?cat=all" class="btn-pc-secondary" style="padding: 10px 20px; font-size: 13.5px;">
                     <span>عرض كافة العتاد</span>
                     <i class="fa-solid fa-arrow-left"></i>
                 </a>
             </div>
 
             <div class="pc-categories-grid">
-                <div class="pc-cat-card" onclick="filterPcCategory('rigs')">
+                <a href="category?cat=rigs" class="pc-cat-card">
                     <div class="pc-cat-icon">
                         <i class="fa-solid fa-server"></i>
                     </div>
                     <h3 class="pc-cat-name">تجميعات الجيمنج 4K</h3>
-                    <span class="pc-cat-count">24 جهاز متوفر</span>
-                </div>
-                <div class="pc-cat-card" onclick="filterPcCategory('laptops')">
+                    <span class="pc-cat-count">أجهزة احترافية متوفرة</span>
+                </a>
+                <a href="category?cat=laptops" class="pc-cat-card">
                     <div class="pc-cat-icon" style="background:var(--color-violet-light); color:var(--color-violet);">
                         <i class="fa-solid fa-laptop"></i>
                     </div>
-                    <h3 class="pc-cat-name">لابتوبات المحترفين</h3>
-                    <span class="pc-cat-count">16 موديل</span>
-                </div>
-                <div class="pc-cat-card" onclick="filterPcCategory('monitors')">
+                    <h3 class="pc-cat-name">لابتوبات المحترفين والمونتاج</h3>
+                    <span class="pc-cat-count">أجهزة فائقة الأداء</span>
+                </a>
+                <a href="category?cat=monitors" class="pc-cat-card">
                     <div class="pc-cat-icon" style="background:#f5f3ff; color:#7c3aed;">
                         <i class="fa-solid fa-tv"></i>
                     </div>
                     <h3 class="pc-cat-name">شاشات OLED منحنية</h3>
-                    <span class="pc-cat-count">19 شاشة</span>
-                </div>
-                <div class="pc-cat-card" onclick="filterPcCategory('hardware')">
+                    <span class="pc-cat-count">معدل تحديث 240Hz</span>
+                </a>
+                <a href="category?cat=hardware" class="pc-cat-card">
                     <div class="pc-cat-icon" style="background:#fffbeb; color:#d97706;">
                         <i class="fa-solid fa-microchip"></i>
                     </div>
-                    <h3 class="pc-cat-name">معالجات وكروت شاشة</h3>
-                    <span class="pc-cat-count">38 قطعة أصلية</span>
-                </div>
-                <div class="pc-cat-card" onclick="filterPcCategory('accessories')">
+                    <h3 class="pc-cat-name">قطع الهاردوير وكروت الشاشة</h3>
+                    <span class="pc-cat-count">كروت RTX ومعالجات</span>
+                </a>
+                <a href="category?cat=accessories" class="pc-cat-card">
                     <div class="pc-cat-icon" style="background:#eff6ff; color:#2563eb;">
                         <i class="fa-solid fa-keyboard"></i>
                     </div>
-                    <h3 class="pc-cat-name">ملحقات وكيبورد ميكانيكي</h3>
-                    <span class="pc-cat-count">42 ملحق فاخر</span>
-                </div>
+                    <h3 class="pc-cat-name">ملحقات واكسسوارات الجيمنج</h3>
+                    <span class="pc-cat-count">كيبوردات وسماعات</span>
+                </a>
             </div>
         </div>
     </section>
@@ -829,46 +830,30 @@
                     <div class="pc-filter-group">
                         <label class="pc-filter-label">نوع العتاد</label>
                         <div class="pc-filter-cats">
-                            <button class="pc-filter-cat-btn active" onclick="filterPcCategory('all', this)">
+                            <a href="category?cat=all" class="pc-filter-cat-btn active">
                                 <span>كافة الأجهزة والقطع</span>
                                 <span class="badge" id="pcbadge-all">11</span>
-                            </button>
-                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('rigs', this)">
+                            </a>
+                            <a href="category?cat=rigs" class="pc-filter-cat-btn">
                                 <span>تجميعات كمبيوتر مكتبي</span>
                                 <span class="badge" id="pcbadge-rigs">2</span>
-                            </button>
-                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('laptops', this)">
+                            </a>
+                            <a href="category?cat=laptops" class="pc-filter-cat-btn">
                                 <span>لابتوبات احترافية</span>
-                                <span class="badge" id="pcbadge-laptops">1</span>
-                            </button>
-                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('monitors', this)">
+                                <span class="badge" id="pcbadge-laptops">2</span>
+                            </a>
+                            <a href="category?cat=monitors" class="pc-filter-cat-btn">
                                 <span>شاشات ألعاب OLED</span>
-                                <span class="badge" id="pcbadge-monitors">1</span>
-                            </button>
-                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('gpus', this)">
-                                <span>كروت الشاشة RTX</span>
-                                <span class="badge" id="pcbadge-gpus">1</span>
-                            </button>
-                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('cpus', this)">
-                                <span>المعالجات المركزية</span>
-                                <span class="badge" id="pcbadge-cpus">1</span>
-                            </button>
-                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('cooling', this)">
-                                <span>التبريد المائي السائل</span>
-                                <span class="badge" id="pcbadge-cooling">1</span>
-                            </button>
-                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('storage', this)">
-                                <span>ذواكر DDR5 والتخزين</span>
-                                <span class="badge" id="pcbadge-storage">1</span>
-                            </button>
-                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('cases', this)">
-                                <span>صناديق الكيس والباور</span>
-                                <span class="badge" id="pcbadge-cases">1</span>
-                            </button>
-                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('accessories', this)">
+                                <span class="badge" id="pcbadge-monitors">2</span>
+                            </a>
+                            <a href="category?cat=hardware" class="pc-filter-cat-btn">
+                                <span>قطع الهاردوير وكروت الشاشة</span>
+                                <span class="badge" id="pcbadge-gpus">2</span>
+                            </a>
+                            <a href="category?cat=accessories" class="pc-filter-cat-btn">
                                 <span>ملحقات وإكسسوارات</span>
                                 <span class="badge" id="pcbadge-accessories">2</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -1019,11 +1004,11 @@
                 <div class="pc-footer-col">
                     <h4>أقسام العتاد والكمبيوتر</h4>
                     <ul class="pc-footer-links">
-                        <li><a href="#catalog" onclick="filterPcCategory('rigs')">تجميعات الجيمنج 4K</a></li>
-                        <li><a href="#catalog" onclick="filterPcCategory('laptops')">لابتوبات الأعمال والمونتاج</a></li>
-                        <li><a href="#catalog" onclick="filterPcCategory('monitors')">شاشات العرض والـ OLED</a></li>
-                        <li><a href="#catalog" onclick="filterPcCategory('hardware')">المعالجات وكروت الشاشة</a></li>
-                        <li><a href="#catalog" onclick="filterPcCategory('accessories')">الكيبورد والملحقات الميكانيكية</a></li>
+                        <li><a href="category?cat=rigs">تجميعات الجيمنج 4K</a></li>
+                        <li><a href="category?cat=laptops">لابتوبات الأعمال والمونتاج</a></li>
+                        <li><a href="category?cat=monitors">شاشات العرض والـ OLED</a></li>
+                        <li><a href="category?cat=hardware">المعالجات وكروت الشاشة</a></li>
+                        <li><a href="category?cat=accessories">الكيبورد والملحقات الميكانيكية</a></li>
                     </ul>
                 </div>
 

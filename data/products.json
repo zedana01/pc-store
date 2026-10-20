@@ -373,6 +373,96 @@
       ],
       "reviewsCount": 110,
       "featured": false
+    },
+    {
+      "id": 11,
+      "name": "تجميعة ألترا ميني ITX كومباكت RTX 4070 Ti Super",
+      "category": "rigs",
+      "categoryName": "تجميعات الجيمنج 4K",
+      "price": 9450,
+      "oldPrice": 10200,
+      "badge": "حجم مدمج خارق",
+      "image": "images/pc_hero_rig_white.jpg",
+      "specs": [
+        "RTX 4070 Ti Super 16GB",
+        "Intel Core i7-14700K",
+        "32GB DDR5 6000MHz",
+        "كيس ITX ألمنيوم أنودايز"
+      ],
+      "description": "قوة الحواسب الضخمة في هيكل مدمج فائق الصغر بتبريد هيدروليكي فائق الهدوء.",
+      "inStock": true
+    },
+    {
+      "id": 12,
+      "name": "لابتوب ألترا زيفيروس 14 إنش وركستيشن Ryzen 9 OLED",
+      "category": "laptops",
+      "categoryName": "لابتوبات المحترفين والمونتاج",
+      "price": 11200,
+      "oldPrice": 12400,
+      "badge": "خفة وقوة",
+      "image": "images/pc_hero_laptop_white.jpg",
+      "specs": [
+        "AMD Ryzen 9 8945HS",
+        "RTX 4080 12GB Max-Q",
+        "شاشة 3K 120Hz OLED",
+        "وزن 1.5 كجم وبطارية 10 ساعات"
+      ],
+      "description": "أقوى حاسب محمول للمصممين والمبرمجين وصناع المحتوى بمواصفات عتادية استثنائية.",
+      "inStock": true
+    },
+    {
+      "id": 13,
+      "name": "شاشة قيمنق احترافية 32 إنش 4K UHD 160Hz Mini-LED",
+      "category": "monitors",
+      "categoryName": "شاشات العرض والـ OLED",
+      "price": 3850,
+      "oldPrice": 4200,
+      "badge": "دقة 4K فائقة",
+      "image": "images/pc_hero_monitor_white.jpg",
+      "specs": [
+        "لوحة Fast IPS Mini-LED",
+        "سطوع 1000 nits HDR",
+        "زمن استجابة 1ms GTG",
+        "منفذ HDMI 2.1 مزدوج"
+      ],
+      "description": "تجربة سينمائية مبهرة بألوان نقية بنسبة 99% DCI-P3 ودقة 4K لكافة ألعاب الـ AAA.",
+      "inStock": true
+    },
+    {
+      "id": 14,
+      "name": "مزود طاقة Corsair HX1200i Platinum رقمي كامل التعديل",
+      "category": "hardware",
+      "categoryName": "قطع الهاردوير وكروت الشاشة",
+      "price": 1650,
+      "oldPrice": 1850,
+      "badge": "كفاءة Platinum",
+      "image": "images/cat_banner_hardware.jpg",
+      "specs": [
+        "1200W كفاءة بلاتينيوم 92%",
+        "كابلات 12V-2x6 الأصلية",
+        "مروحة سائلة FDB صامتة",
+        "ضمان 10 سنوات"
+      ],
+      "description": "طاقة موثوقة ومستقرة لأعلى التجميعات احترافية مع حماية رقمية شاملة.",
+      "inStock": true
+    },
+    {
+      "id": 15,
+      "name": "ماوس جيمنج لاسلكي ألترا لايت 4K Polling مستشعر بصري",
+      "category": "accessories",
+      "categoryName": "ملحقات واكسسوارات الجيمنج",
+      "price": 580,
+      "oldPrice": 690,
+      "badge": "سرعة 4000Hz",
+      "image": "images/cat_banner_accessories.jpg",
+      "specs": [
+        "وزن 49 غرام فقط",
+        "معدل استطلاع 4000Hz",
+        "سويتشات ضوئية 100M ضغطة",
+        "بطارية تدوم 80 ساعة"
+      ],
+      "description": "تحكم فوري ودقة جراحية في ألعاب التصويب التنافسية بمعدل استجابة 0.25ms.",
+      "inStock": true
     }
   ]
 }

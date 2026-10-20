@@ -400,16 +400,15 @@
     }
 
     function getCatArabicName(c) {
-        if (c === 'rigs') return 'ØªØ¬Ù…ÙŠØ¹Ø§Øª Ø§Ù„Ø¬ÙŠÙ…Ù†Ø¬ 4K Ø§Ù„Ø§Ø­ØªØ±Ø§ÙÙŠØ©';
-        if (c === 'laptops') return 'Ù„Ø§Ø¨ØªÙˆØ¨Ø§Øª Ø§Ù„Ø§Ø³ØªÙˆØ¯ÙŠÙˆ ÙˆØ§Ù„Ù…ÙˆÙ†ØªØ§Ø¬';
-        if (c === 'monitors') return 'Ø´Ø§Ø´Ø§Øª QD-OLED Ø§Ù„Ù…Ù†Ø­Ù†ÙŠØ© 240Hz';
-        if (c === 'gpus') return 'ÙƒØ±ÙˆØª Ø§Ù„Ø´Ø§Ø´Ø© RTX 40 & 50 Series';
-        if (c === 'cpus') return 'Ø§Ù„Ù…Ø¹Ø§Ù„Ø¬Ø§Øª Ø§Ù„Ù…Ø±ÙƒØ²ÙŠØ© Intel & AMD';
-        if (c === 'cooling') return 'Ø£Ù†Ø¸Ù…Ø© Ø§Ù„ØªØ¨Ø±ÙŠØ¯ Ø§Ù„Ù…Ø§Ø¦ÙŠ Ø§Ù„Ø³Ø§Ø¦Ù„ Custom';
-        if (c === 'storage') return 'Ø°ÙˆØ§ÙƒØ± DDR5 ÙˆÙˆØ­Ø¯Ø§Øª NVMe Gen5';
-        if (c === 'cases') return 'ØµÙ†Ø§Ø¯ÙŠÙ‚ Ø§Ù„ÙƒÙŠØ³ ÙˆÙ…Ø²ÙˆØ¯Ø§Øª Ø§Ù„Ø·Ø§Ù‚Ø© Gold';
-        if (c === 'accessories') return 'Ù…Ù„Ø­Ù‚Ø§Øª ÙˆØ§ÙƒØ³Ø³ÙˆØ§Ø±Ø§Øª Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨ Ø§Ù„Ø§Ø­ØªØ±Ø§ÙÙŠØ©';
-        return 'ÙƒØ§ÙØ© Ø§Ù„Ø£Ø¬Ù‡Ø²Ø© ÙˆÙ‚Ø·Ø¹ Ø§Ù„Ø¹ØªØ§Ø¯';
+        if (c === 'rigs') return 'تجميعات الجيمنج 4K الاحترافية';
+        if (c === 'laptops') return 'لابتوبات الاستوديو والمونتاج';
+        if (c === 'monitors') return 'شاشات QD-OLED المنحنية 240Hz';
+        if (c === 'gpus' || c === 'cpus' || c === 'hardware') return 'قطع الهاردوير وكروت الشاشة';
+        if (c === 'cooling') return 'أنظمة التبريد المائي السائل Custom';
+        if (c === 'storage') return 'ذواكر DDR5 ووحدات NVMe Gen5';
+        if (c === 'cases') return 'صناديق الكيس ومزودات الطاقة Gold';
+        if (c === 'accessories') return 'ملحقات واكسسوارات الألعاب الاحترافية';
+        return 'كافة الأجهزة وقطع العتاد';
     }
 
     function filterPcCategory(cat, btn) {

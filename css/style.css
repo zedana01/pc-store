@@ -57,6 +57,7 @@
     body, h1, h2, h3, h4, h5, h6, p, a, span, button, input, textarea, select, label, div {
         font-family: var(--font-main) !important;
         text-align: right !important;
+        text-decoration: none !important;
     }
 
     i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands, [class^="fa-"], [class*=" fa-"], svg.svg-inline--fa {
@@ -968,6 +969,8 @@
         justify-content: center;
         gap: 12px;
         box-shadow: var(--shadow-subtle);
+        text-decoration: none !important;
+        color: inherit !important;
     }
     .pc-cat-card:hover {
         transform: translateY(-5px);
@@ -1086,6 +1089,8 @@
         height: 100%;
         position: relative;
         box-shadow: var(--shadow-subtle);
+        text-decoration: none !important;
+        color: inherit !important;
     }
     .pc-card:hover {
         transform: translateY(-5px);
@@ -1276,6 +1281,7 @@
         transition: var(--transition);
         width: 100%;
         text-align: right !important;
+        text-decoration: none !important;
     }
     .pc-filter-cat-btn:hover {
         background: var(--color-primary-light);
@@ -1884,7 +1890,7 @@
     position: relative;
     border-radius: 24px;
     overflow: hidden;
-    min-height: 280px;
+    min-height: 330px;
     display: flex;
     align-items: center;
     background: #090d16;
@@ -1906,7 +1912,7 @@
 .pc-cat-banner-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(9, 13, 22, 0.92) 0%, rgba(67, 56, 202, 0.82) 55%, rgba(9, 13, 22, 0.72) 100%);
+    background: linear-gradient(to left, rgba(9, 13, 22, 0.94) 0%, rgba(9, 13, 22, 0.72) 50%, rgba(9, 13, 22, 0.28) 100%);
 }
 .pc-cat-banner-content {
     position: relative;
