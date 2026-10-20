@@ -1,0 +1,378 @@
+{
+  "settings": {
+    "storeName": "سايبر تك PC",
+    "storeSubtitle": "CYBERTECH PC & GAMING STORE",
+    "phone": "800-PC-ULTRA",
+    "whatsapp": "01027093535",
+    "whatsappFormatted": "201027093535",
+    "email": "support@cybertech-pc.com",
+    "address": "المملكة العربية السعودية - الرياض - مجمع الحاسبات العليا",
+    "currency": "ر.س",
+    "adminPin": "1234",
+    "freeShippingThreshold": 500,
+    "topbarAnnouncement": "🚀 عروض ألترا بي سي الكبرى: شحن مجاني لكافة التجميعات + تركيب واختبار إجهاد Stress Test مجاناً وضمان سنتين!"
+  },
+  "pages": {
+    "home": {
+      "heroTitle": "وحش الألعاب والـ 4K – تجميعة النخبة RTX 4090",
+      "heroSubtitle": "أداء جبار بدون قيود. أقوى المعالجات وأحدث كروت الشاشة مع تبريد مائي مغلق وفائق الهدوء. تجميع احترافي مصفح مع نظام تشغيل أصلي مثبت ومضبوط للألعاب فور الاستلام.",
+      "heroBadge": "أحدث إصدارات 2026 للأداء الأقصى",
+      "heroImage": "images/pc_hero_rig_white.jpg",
+      "heroBtnText": "اطلب تجميعتك الآن",
+      "heroBtnLink": "shop.html",
+      "trustFeatures": [
+        {
+          "icon": "fa-screwdriver-wrench",
+          "title": "تجميع واختبار مجاني",
+          "desc": "فحص استقرار درجات الحرارة واختبار إجهاد Stress Test لكافة القطع"
+        },
+        {
+          "icon": "fa-shield-halved",
+          "title": "ضمان محلي معتمد سنتين",
+          "desc": "ضمان الوكيل على كافة القطع واستبدال فوري عند وجود عيب مصنعي"
+        },
+        {
+          "icon": "fa-truck-fast",
+          "title": "شحن مصفح ومؤمن",
+          "desc": "تغليف فوم هوائي خاص لحماية كرت الشاشة والمبرد أثناء النقل السريع"
+        },
+        {
+          "icon": "fa-headset",
+          "title": "دعم تقني وهندسي 24/7",
+          "desc": "فريق متخصص في عتاد القيمنق والمونتاج لمساعدتك في ترقية جهازك"
+        }
+      ],
+      "flashDeals": {
+        "title": "عروض الهاردوير والتجميعات الخاطفة",
+        "subtitle": "خصومات حصرية لفترة محدودة على أقوى كروت الشاشة والشاشات والتجميعات",
+        "badge": "وفر حتى 2,500 ر.س",
+        "hours": 18,
+        "minutes": 45
+      },
+      "spotlight": {
+        "title": "كمبيوتر ألترا ماستر تبريد صلب مخصص RTX 4090 24GB",
+        "badge": "إصدار النخبة المخصص 2026",
+        "subtitle": "تحفة فنية تجمع بين التبريد المائي الصلب Custom Hardline Loop وأعلى أداء رسومي في العالم بدقة 4K وإطارات تتجاوز 240FPS.",
+        "image": "images/pc_prod_white_rig.jpg",
+        "price": 18900,
+        "oldPrice": 21500,
+        "discount": "وفر 2,600 ر.س",
+        "features": [
+          "معالج Intel Core i9-14900KS كسر سرعة مصنعي مستقر",
+          "كرت شاشة Asus ROG Strix GeForce RTX 4090 24GB OC",
+          "رام 64GB DDR5 بسرعة 6400MHz مع إضاءة ARGB متزامنة",
+          "تبريد مائي صلب مع مشتتين 360mm ومضخة D5 فائقة الهدوء"
+        ]
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "name": "عبدالعزيز الدوسري",
+          "city": "الرياض",
+          "rating": 5,
+          "comment": "التجميعة وصلتني في صندوق خشبي مبطن وفوم داخلي لحماية كرت الشاشة، شغل التجميع وترتيب الكيابل كأنه لوحة فنية!",
+          "productName": "تجميعة وايت ريج RTX 4080 Super"
+        },
+        {
+          "id": 2,
+          "name": "م. عمر السليمان",
+          "city": "جدة",
+          "rating": 5,
+          "comment": "شاشة QD-OLED المنحنية خرافية في ألوان الـ HDR وسرعة الاستجابة، وتعامل خدمة العملاء عبر الواتساب ممتاز وسريع.",
+          "productName": "شاشة قيمنق منحنية 34 بوصة QD-OLED"
+        },
+        {
+          "id": 3,
+          "name": "خالد المطيري",
+          "city": "الخبر",
+          "rating": 5,
+          "comment": "لابتوب الاستوديو أنجز لي رندر مشاريع 4K في نصف الوقت، خفيف وبارد والشاشة OLED دقتها تفوق الوصف.",
+          "productName": "لابتوب إيثر برو ستوديو OLED"
+        }
+      ]
+    },
+    "productPage": {
+      "deliveryBadge": "شحن مصفح مجاني لكافة مدن المملكة خلال 24-48 ساعة",
+      "warrantyBadge": "ضمان الوكيل المعتمد سنتين واستبدال فوري",
+      "returnBadge": "استرجاع واستبدال مرن وسهل خلال 14 يوماً",
+      "authenticityBadge": "قطع أصلية جديدة 100% مع الباركود وضمان الوكلاء",
+      "whatsappNote": "هل تحتاج تعديل أو إضافة قطعة معينة على الجهاز؟ تواصل معنا مباشرة عبر واتساب"
+    },
+    "about": {
+      "title": "ألترا بي سي.. المرجع الأول لمحترفي الجيمنج ومحطات العمل",
+      "subtitle": "نحن نبني حواسيب المستقبل بأعلى معايير الهاردوير العالمي واختبارات الإجهاد الشاملة.",
+      "story": "انطلق متجر سايبر تك PC من شغف عميق بتجميعات الكمبيوتر فائقة القوة وكسر السرعة المستقر. نحن لا نبيع مجرد قطع حاسوب، بل نصمم محطات عمل وأجهزة جيمنج متكاملة تم اختبار كل مكوّن فيها بعناية لتقديم أعلى أداء واستقرار تام تحت أقصى درجات الضغط.",
+      "mission": "تزويد اللاعبين وصنّاع المحتوى في المملكة بأفضل عتاد تقني عالمي، مدعوماً بهندسة تجميع احترافية وضمان محلي حقيقي.",
+      "image": "images/pc_hero_rig_white.jpg",
+      "stats": [
+        {
+          "number": "+25,000",
+          "label": "تجميعة مخصصة تم بناؤها"
+        },
+        {
+          "number": "100%",
+          "label": "قطع أصلية وضمان وكيل"
+        },
+        {
+          "number": "48 ساعة",
+          "label": "اختبار إجهاد حراري لكل جهاز"
+        },
+        {
+          "number": "24/7",
+          "label": "دعم فني واستشارات متخصصة"
+        }
+      ]
+    },
+    "contact": {
+      "title": "تواصل مع مهندسي وخبراء ألترا بي سي",
+      "subtitle": "استشارات مجانية لتجميع جهازك، متابعة الشحنات، وخدمات الضمان الفوري.",
+      "phone": "800-PC-ULTRA",
+      "whatsapp": "01027093535",
+      "email": "support@cybertech-pc.com",
+      "address": "المملكة العربية السعودية - الرياض - طريق الملك فهد - مجمع التكنولوجيا",
+      "hours": "السبت - الخميس: من 10:00 صباحاً حتى 11:30 مساءً | الجمعة: من 2:00 ظهراً حتى 11:30 مساءً"
+    }
+  },
+  "categories": [
+    {
+      "id": "all",
+      "name": "كافة أجهزة الهاردوير",
+      "icon": "fa-layer-group",
+      "banner": "images/pc_hero_rig_white.jpg",
+      "title": "كافة أجهزة الكمبيوتر والتجميعات وقطع الهاردوير",
+      "description": "استكشف تشكيلة ألترا بي سي الكاملة من أجهزة القيمنق الخارقة ولابتوبات المحترفين والشاشات بضمان الوكيل وشحن فوري."
+    },
+    {
+      "id": "rigs",
+      "name": "تجميعات الجيمنج 4K",
+      "icon": "fa-desktop",
+      "banner": "images/pc_hero_rig_white.jpg",
+      "title": "تجميعات الجيمنج الاحترافية ودقة 4K فائقة",
+      "description": "أقوى أجهزة الكمبيوتر المكتبية المجهزة بكروت RTX 4090 و 4080 Super مع تبريد مائي مخصص ومظهر أبيض فاخر."
+    },
+    {
+      "id": "laptops",
+      "name": "لابتوبات المحترفين والمونتاج",
+      "icon": "fa-laptop",
+      "banner": "images/pc_hero_laptop_white.jpg",
+      "title": "لابتوبات الجيمنج والمونتاج والهندسة",
+      "description": "قوة الحواسيب المكتبية في هيكل ألمنيوم فائق النحافة مع شاشات OLED بدقة 4K ومعدل تحديث يصل إلى 240Hz."
+    },
+    {
+      "id": "monitors",
+      "name": "شاشات العرض والـ OLED",
+      "icon": "fa-tv",
+      "banner": "images/pc_hero_monitor_white.jpg",
+      "title": "شاشات القيمنق المنحنية و QD-OLED السينمائية",
+      "description": "انغماس بصري لا مثيل له مع معدلات تحديث 240Hz وزمن استجابة فائق 0.03ms ودعم كامل لتقنيات G-Sync Ultimate."
+    },
+    {
+      "id": "hardware",
+      "name": "قطع الهاردوير وكروت الشاشة",
+      "icon": "fa-microchip",
+      "banner": "images/cat_banner_hardware.jpg",
+      "title": "أحدث كروت الشاشة والمعالجات ومزودات الطاقة",
+      "description": "قطع الهاردوير الأصلية بضمان الوكيل المعتمد لترقية جهازك والحصول على أعلى معدلات الإطارات FPS."
+    },
+    {
+      "id": "accessories",
+      "name": "ملحقات واكسسوارات الجيمنج",
+      "icon": "fa-keyboard",
+      "banner": "images/cat_banner_accessories.jpg",
+      "title": "كيبوردات ميكانيكية وماوسات وسماعات محيطية",
+      "description": "ملحقات الجيمنج الاحترافية بسويتشات ميكانيكية مخصصة ومستشعرات ضوئية بالغة الدقة لتفوقك في المنافسات."
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "كمبيوتر ألترا ماستر تبريد صلب مخصص RTX 4090",
+      "category": "rigs",
+      "categoryName": "تجميعات الجيمنج 4K",
+      "price": 18900,
+      "oldPrice": 21500,
+      "discount": "خصم 12%",
+      "badge": "وحش الـ 4K",
+      "image": "images/pc_prod_white_rig.jpg",
+      "specs": [
+        "Core i9-14900KS",
+        "RTX 4090 24GB",
+        "RAM 64GB DDR5",
+        "تبريد مائي صلب"
+      ],
+      "reviewsCount": 84,
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": "تجميعة ألترا وايت ريج مائية RTX 4080 Super",
+      "category": "rigs",
+      "categoryName": "تجميعات الجيمنج 4K",
+      "price": 12600,
+      "oldPrice": 14000,
+      "discount": "خصم 10%",
+      "badge": "الأكثر طلباً",
+      "image": "images/pc_hero_rig_white.jpg",
+      "specs": [
+        "Ryzen 7 7800X3D",
+        "RTX 4080 Super 16GB",
+        "RAM 32GB DDR5",
+        "مائي 360mm ARGB"
+      ],
+      "reviewsCount": 112,
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": "لابتوب إيثر برو ستوديو 16 إنش OLED 240Hz",
+      "category": "laptops",
+      "categoryName": "لابتوبات المحترفين والمونتاج",
+      "price": 9850,
+      "oldPrice": 10800,
+      "discount": "وفر 950 ر.س",
+      "badge": "للمحترفين",
+      "image": "images/pc_prod_laptop_pro.jpg",
+      "specs": [
+        "شاشة 16 OLED 240Hz",
+        "Core i9-14900HX",
+        "RTX 4080 12GB",
+        "SSD 2TB NVMe"
+      ],
+      "reviewsCount": 67,
+      "featured": true
+    },
+    {
+      "id": 4,
+      "name": "شاشة قيمنق منحنية 34 بوصة QD-OLED 240Hz",
+      "category": "monitors",
+      "categoryName": "شاشات العرض والـ OLED",
+      "price": 3890,
+      "oldPrice": 4490,
+      "discount": "خصم 13%",
+      "badge": "دقة سينمائية",
+      "image": "images/pc_hero_monitor_white.jpg",
+      "specs": [
+        "UWQHD 3440x1440",
+        "انحناء 1800R",
+        "استجابة 0.03ms",
+        "G-Sync Ultimate"
+      ],
+      "reviewsCount": 95,
+      "featured": true
+    },
+    {
+      "id": 5,
+      "name": "كرت شاشة Asus ROG Strix GeForce RTX 4090 24GB OC",
+      "category": "hardware",
+      "categoryName": "قطع الهاردوير وكروت الشاشة",
+      "price": 8450,
+      "oldPrice": 9200,
+      "discount": "وفر 750 ر.س",
+      "badge": "أعلى أداء",
+      "image": "images/pc_prod_gpu.jpg",
+      "specs": [
+        "ذاكرة 24GB GDDR6X",
+        "تبريد ثلاثي محوري",
+        "هيكل معدني مصفح",
+        "Dual BIOS"
+      ],
+      "reviewsCount": 58,
+      "featured": true
+    },
+    {
+      "id": 6,
+      "name": "كيبورد ميكانيكي مخصص سويتشات تشحيم احترافي RGB",
+      "category": "accessories",
+      "categoryName": "ملحقات واكسسوارات الجيمنج",
+      "price": 680,
+      "oldPrice": 850,
+      "discount": "خصم 20%",
+      "badge": "صوت مميز",
+      "image": "images/pc_prod_keyboard.jpg",
+      "specs": [
+        "سويتشات خطية ناعمة",
+        "شاسيه ألمنيوم",
+        "عزل سيليكون مزدوج",
+        "لاسلكي 2.4GHz"
+      ],
+      "reviewsCount": 128,
+      "featured": true
+    },
+    {
+      "id": 7,
+      "name": "لابتوب قيمنق ألترا سترايك 15.6 إنش 165Hz RTX 4060",
+      "category": "laptops",
+      "categoryName": "لابتوبات المحترفين والمونتاج",
+      "price": 4950,
+      "oldPrice": 5600,
+      "discount": "خصم 11%",
+      "badge": "قيمة ممتازة",
+      "image": "images/pc_hero_laptop_white.jpg",
+      "specs": [
+        "Ryzen 7 7735HS",
+        "RTX 4060 8GB",
+        "RAM 16GB DDR5",
+        "شاشة 165Hz sRGB 100%"
+      ],
+      "reviewsCount": 73,
+      "featured": false
+    },
+    {
+      "id": 8,
+      "name": "شاشة قيمنق مسطحة Fast IPS 27 بوصة 2K 180Hz",
+      "category": "monitors",
+      "categoryName": "شاشات العرض والـ OLED",
+      "price": 1450,
+      "oldPrice": 1790,
+      "discount": "وفر 340 ر.س",
+      "badge": "سريعة جداً",
+      "image": "images/pc_prod_monitor.jpg",
+      "specs": [
+        "دقة 2K QHD",
+        "معدل 180Hz",
+        "زمن 1ms GTG",
+        "HDR 400"
+      ],
+      "reviewsCount": 89,
+      "featured": false
+    },
+    {
+      "id": 9,
+      "name": "معالج Intel Core i9-14900KS تردد 6.2GHz كسر سرعة",
+      "category": "hardware",
+      "categoryName": "قطع الهاردوير وكروت الشاشة",
+      "price": 2750,
+      "oldPrice": 3100,
+      "discount": "خصم 11%",
+      "badge": "معالج القمة",
+      "image": "images/cat_banner_hardware.jpg",
+      "specs": [
+        "24 نواة (8P+16E)",
+        "32 مسار",
+        "تردد يصل 6.2GHz",
+        "دعم DDR5 و PCIe 5.0"
+      ],
+      "reviewsCount": 42,
+      "featured": false
+    },
+    {
+      "id": 10,
+      "name": "سماعات رأس محيطية لاسلكية هاي ريز مع ميكروفون استوديو",
+      "category": "accessories",
+      "categoryName": "ملحقات واكسسوارات الجيمنج",
+      "price": 820,
+      "oldPrice": 990,
+      "discount": "وفر 170 ر.س",
+      "badge": "صوت محيطي 7.1",
+      "image": "images/prod_silver_headphones.jpg",
+      "specs": [
+        "صوت مكاني 360 Spatial",
+        "اتصال لاسلكي فائق السرعة",
+        "بطارية 50 ساعة",
+        "وسائد ميموري فوم"
+      ],
+      "reviewsCount": 110,
+      "featured": false
+    }
+  ]
+}

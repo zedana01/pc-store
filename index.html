@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سايبر تك PC | أقوى تجميعات الجيمنج وهاردوير المحترفين</title>
+    <meta name="description" content="متجر سايبر تك PC الرائد في تجميعات الكمبيوتر الاحترافية، لابتوبات الجيمنج والمونتاج، الشاشات المنحنية، وكروت الشاشة الأصلية بضمان سنتين.">
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 Pro / Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="pc-header">
+        <div class="pc-container">
+            <div class="pc-header-main">
+                <!-- Logo -->
+                <a href="index.html" class="pc-logo-link">
+                    <div class="pc-logo-icon">
+                        <i class="fa-solid fa-computer"></i>
+                    </div>
+                    <div class="pc-logo-text">
+                        <span class="pc-logo-title">ألترا بي سي</span>
+                        <span class="pc-logo-sub">ULTRA PC COMPUTING</span>
+                    </div>
+                </a>
+
+                <!-- Search Form -->
+                <form class="pc-search-form" onsubmit="event.preventDefault(); searchPcProducts();">
+                    <input type="text" id="pcSearchInput" class="pc-search-input" placeholder="ابحث عن تجميعة ألعاب، معالج i9، كرت RTX 4080، أو لابتوب أعمال..." onkeyup="searchPcProducts()">
+                    <button type="submit" class="pc-search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>بحث</span>
+                    </button>
+                </form>
+
+                <!-- Header Actions -->
+                <div class="pc-header-actions">
+<a href="admin/index.html" class="pc-action-btn" title="لوحة التحكم الإدارية" style="background: rgba(79, 70, 229, 0.12); color: #4f46e5; font-weight: 700; border-radius: 12px; border: 1px solid rgba(79, 70, 229, 0.3);">
+                    <i class="fa-solid fa-user-shield"></i>
+                </a>
+                
+                    <a href="#builder" class="pc-action-btn" style="background: var(--color-primary-light); color: var(--color-primary); border-color: var(--color-primary);">
+                        <i class="fa-solid fa-sliders"></i>
+                        <span>مُنشئ التجميعات</span>
+                    </a>
+                    <div class="pc-action-btn" onclick="showToast('تمت إضافة الجهاز إلى المفضلة ❤️')">
+                        <i class="fa-regular fa-heart" style="font-size: 18px; color: var(--color-primary);"></i>
+                        <span class="pc-action-badge">4</span>
+                    </div>
+                    <div class="pc-action-btn" onclick="togglePcCartDrawer()">
+                        <i class="fa-solid fa-bag-shopping" style="font-size: 18px; color: var(--color-primary);"></i>
+                        <span>سلة العتاد</span>
+                        <span class="pc-action-badge" id="pcCartBadge">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Secondary Nav -->
+        <div class="pc-navbar">
+            <div class="pc-container">
+                <div class="pc-navbar-inner">
+                    <ul class="pc-nav-menu">
+                        <li class="pc-nav-item">
+                            <a href="#catalog" id="btnAllPcCategories" class="pc-nav-mega-btn" onclick="filterPcCategory('all')" style="background-color: #4f46e5 !important; color: #ffffff !important; min-width: 280px; justify-content: space-between; border-radius: 10px 10px 0 0;">
+                                <span style="display:flex; align-items:center; gap:10px; color:#ffffff !important;">
+                                    <i class="fa-solid fa-bars" style="color: #ffffff !important;"></i>
+                                    <span style="color: #ffffff !important;">تصفح كافة الأقسام</span>
+                                </span>
+                                <i class="fa-solid fa-chevron-down" style="font-size: 11px; color:#ffffff !important; margin-right: 8px;"></i>
+                            </a>
+                        </li>
+                        <li class="pc-nav-item active"><a href="#">الرئيسية</a></li>
+                        <li class="pc-nav-item"><a href="#builder">بناء تجميعة مخصصة</a></li>
+                        <li class="pc-nav-item"><a href="#flashDeals">عروض الهاردوير الخاطفة</a></li>
+                        <li class="pc-nav-item"><a href="#catalog" onclick="filterPcCategory('rigs')">تجميعات الجيمنج 4K</a></li>
+                        <li class="pc-nav-item"><a href="#catalog" onclick="filterPcCategory('laptops')">لابتوبات المحترفين</a></li>
+                        <li class="pc-nav-item"><a href="#catalog" onclick="filterPcCategory('monitors')">شاشات OLED منحنية</a></li>
+                        <li class="pc-nav-item"><a href="#catalog" onclick="filterPcCategory('hardware')">قطع الهاردوير والمعالجات</a></li>
+                    </ul>
+                    <div class="pc-nav-hotline">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>الخط التقني المباشر: <strong>800-ULTRA-PC</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. WOODMART-STYLE HERO BLOCK (CATEGORIES SIDEBAR + ADJACENT HERO SLIDER) -->
+    <section class="pc-woodmart-hero" id="heroSlider">
+        <div class="pc-container">
+            <div class="pc-woodmart-grid">
+                <!-- Column 1: Vertical Categories Sidebar (WoodMart Style) -->
+                <aside class="pc-woodmart-cats">
+                    <div class="pc-wm-cat-header">
+                        <span><i class="fa-solid fa-layer-group"></i> أقسام وتصنيفات العتاد</span>
+                        <i class="fa-solid fa-sliders" style="font-size: 12px; opacity: 0.8;"></i>
+                    </div>
+                    <ul class="pc-wm-cat-list">
+                        <li class="pc-wm-cat-item">
+                            <a href="#catalog" onclick="filterPcCategory('rigs')" class="pc-wm-cat-link">
+                                <div class="pc-wm-cat-left">
+                                    <i class="fa-solid fa-gamepad pc-wm-cat-icon"></i>
+                                    <span>تجميعات الجيمنج 4K الاحترافية</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left pc-wm-cat-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="pc-wm-cat-item">
+                            <a href="#catalog" onclick="filterPcCategory('laptops')" class="pc-wm-cat-link">
+                                <div class="pc-wm-cat-left">
+                                    <i class="fa-solid fa-laptop pc-wm-cat-icon"></i>
+                                    <span>لابتوبات الاستوديو والمونتاج</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left pc-wm-cat-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="pc-wm-cat-item">
+                            <a href="#catalog" onclick="filterPcCategory('monitors')" class="pc-wm-cat-link">
+                                <div class="pc-wm-cat-left">
+                                    <i class="fa-solid fa-tv pc-wm-cat-icon"></i>
+                                    <span>شاشات QD-OLED المنحنية 240Hz</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left pc-wm-cat-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="pc-wm-cat-item">
+                            <a href="#catalog" onclick="filterPcCategory('gpus')" class="pc-wm-cat-link">
+                                <div class="pc-wm-cat-left">
+                                    <i class="fa-solid fa-microchip pc-wm-cat-icon"></i>
+                                    <span>كروت الشاشة RTX 40 & 50 Series</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left pc-wm-cat-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="pc-wm-cat-item">
+                            <a href="#catalog" onclick="filterPcCategory('cpus')" class="pc-wm-cat-link">
+                                <div class="pc-wm-cat-left">
+                                    <i class="fa-solid fa-memory pc-wm-cat-icon"></i>
+                                    <span>المعالجات المركزية Intel & AMD</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left pc-wm-cat-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="pc-wm-cat-item">
+                            <a href="#catalog" onclick="filterPcCategory('cooling')" class="pc-wm-cat-link">
+                                <div class="pc-wm-cat-left">
+                                    <i class="fa-solid fa-droplet pc-wm-cat-icon"></i>
+                                    <span>أنظمة التبريد المائي السائل Custom</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left pc-wm-cat-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="pc-wm-cat-item">
+                            <a href="#catalog" onclick="filterPcCategory('storage')" class="pc-wm-cat-link">
+                                <div class="pc-wm-cat-left">
+                                    <i class="fa-solid fa-hard-drive pc-wm-cat-icon"></i>
+                                    <span>ذواكر DDR5 ووحدات NVMe Gen5</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left pc-wm-cat-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="pc-wm-cat-item">
+                            <a href="#catalog" onclick="filterPcCategory('cases')" class="pc-wm-cat-link">
+                                <div class="pc-wm-cat-left">
+                                    <i class="fa-solid fa-server pc-wm-cat-icon"></i>
+                                    <span>صناديق الكيس ومزودات الطاقة Gold</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left pc-wm-cat-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="pc-wm-cat-item">
+                            <a href="#catalog" onclick="filterPcCategory('accessories')" class="pc-wm-cat-link">
+                                <div class="pc-wm-cat-left">
+                                    <i class="fa-solid fa-headphones pc-wm-cat-icon"></i>
+                                    <span>ملحقات واكسسوارات الألعاب الاحترافية</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left pc-wm-cat-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="pc-wm-cat-item">
+                            <a href="#flashDeals" class="pc-wm-cat-link" style="background:#fffbeb;">
+                                <div class="pc-wm-cat-left">
+                                    <i class="fa-solid fa-fire pc-wm-cat-icon" style="color:#f59e0b;"></i>
+                                    <span style="color:#b45309; font-weight:800;">عروض الهاردوير والتصفية الخاطفة</span>
+                                </div>
+                                <span class="pc-wm-badge-deal">خصم 35%</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <!-- Column 2: Adjacent Hero Slider (WoodMart Style) -->
+                <div class="pc-woodmart-slider-box">
+                    <!-- Nav Arrows -->
+                    <button class="pc-wm-arrow prev" onclick="prevHeroSlide()" aria-label="السابق" title="السابق">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <button class="pc-wm-arrow next" onclick="nextHeroSlide()" aria-label="التالي" title="التالي">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <div class="pc-wm-slider-container">
+                        <div class="pc-wm-slider-track" id="heroTrack">
+                            <!-- Slide 0: RTX 4090 Monster Rig -->
+                            <div class="pc-wm-slide">
+                                <div class="pc-wm-slide-grid">
+                                    <div class="pc-wm-content">
+                                        <div class="pc-wm-tag">
+                                            <span class="pc-pulse-dot"></span>
+                                            <span>إصدار النخبة المحدود 2026 • تبريد مائي سائل</span>
+                                        </div>
+                                        <h1 class="pc-wm-title">وحش الألعاب والـ 4K –<br><span>تجميعة النخبة RTX 4090.</span></h1>
+                                        <p class="pc-wm-desc">
+                                            هندسة حاسوبية خارقة مصممة للبطولات وصناع المحتوى، معالج Intel Core i9-14900KS الأسرع عالمياً، تبريد مائي سائل فائق الهدوء، واستقرار تام +280 FPS على دقة 4K Ultra.
+                                        </p>
+                                        <div class="pc-wm-spec-row">
+                                            <span class="pc-wm-spec-chip"><i class="fa-solid fa-microchip"></i> i9-14900KS</span>
+                                            <span class="pc-wm-spec-chip"><i class="fa-solid fa-layer-group"></i> RTX 4090 24GB</span>
+                                            <span class="pc-wm-spec-chip"><i class="fa-solid fa-memory"></i> 64GB DDR5</span>
+                                            <span class="pc-wm-spec-chip"><i class="fa-solid fa-shield-check"></i> ضمان 3 سنوات</span>
+                                        </div>
+                                        <div class="pc-wm-price-row">
+                                            <div class="pc-wm-price-current">12,600 ر.س</div>
+                                            <div class="pc-wm-price-old">14,000 ر.س</div>
+                                            <span class="pc-wm-save-badge">وفر 1,400 ر.س</span>
+                                        </div>
+                                        <div class="pc-wm-ctas">
+                                            <a href="#catalog" class="btn-pc-primary">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                <span>اطلب التجميعة الآن (شحن فوري)</span>
+                                            </a>
+                                            <a href="#builder" class="btn-pc-secondary">
+                                                <i class="fa-solid fa-sliders"></i>
+                                                <span>تخصيص في المُنشئ</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="pc-wm-visual">
+                                        <div class="pc-wm-img-wrap">
+                                            <img decoding="async" src="images/pc_hero_rig_white.jpg" alt="تجميعة ألعاب احترافية RTX 4090" title="متجر سايبر تك PC | نموذج متجر أجهزة كمبيوتر">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 1: Creator Aero Studio Laptop -->
+                            <div class="pc-wm-slide">
+                                <div class="pc-wm-slide-grid">
+                                    <div class="pc-wm-content">
+                                        <div class="pc-wm-tag" style="background:#f5f3ff; color:#7c3aed; border-color:rgba(124, 58, 237, 0.25);">
+                                            <span class="pc-pulse-dot" style="background:#7c3aed; box-shadow:0 0 0 3px rgba(124, 58, 237, 0.25);"></span>
+                                            <span>استوديوهات الإنتاج السينمائي والـ AI</span>
+                                        </div>
+                                        <h1 class="pc-wm-title">استوديو الإبداع المتنقل –<br><span style="background:linear-gradient(135deg, #7c3aed, #6d28d9); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">لابتوب 4K OLED الخارق.</span></h1>
+                                        <p class="pc-wm-desc">
+                                            محطة العمل المحمولة للمصممين والمبرمجين، شاشة 4K OLED بألوان سينمائية مطابقة 100% DCI-P3، معالج RTX 4080 Super لتدريب الذكاء الاصطناعي وبطارية تدوم 14 ساعة عمل.
+                                        </p>
+                                        <div class="pc-wm-spec-row">
+                                            <span class="pc-wm-spec-chip"><i class="fa-solid fa-display"></i> 16" 4K OLED 120Hz</span>
+                                            <span class="pc-wm-spec-chip"><i class="fa-solid fa-laptop"></i> RTX 4080 Super</span>
+                                            <span class="pc-wm-spec-chip"><i class="fa-solid fa-hard-drive"></i> 4TB Gen5 SSD</span>
+                                            <span class="pc-wm-spec-chip"><i class="fa-solid fa-battery-full"></i> 14 ساعة عمل</span>
+                                        </div>
+                                        <div class="pc-wm-price-row">
+                                            <div class="pc-wm-price-current">9,850 ر.س</div>
+                                            <div class="pc-wm-price-old">10,800 ر.س</div>
+                                            <span class="pc-wm-save-badge">وفر 950 ر.س</span>
+                                        </div>
+                                        <div class="pc-wm-ctas">
+                                            <a href="#catalog" class="btn-pc-primary" style="background:linear-gradient(135deg, #7c3aed, #6d28d9);">
+                                                <i class="fa-solid fa-bag-shopping"></i>
+                                                <span>تسوق لابتوبات الاستوديو</span>
+                                            </a>
+                                            <a href="#catalog" class="btn-pc-secondary">
+                                                <i class="fa-solid fa-chart-line"></i>
+                                                <span>مقارنة المواصفات</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="pc-wm-visual">
+                                        <div class="pc-wm-img-wrap">
+                                            <img decoding="async" src="images/pc_hero_laptop_white.jpg" alt="لابتوب استوديو 4K OLED للمونتاج" title="متجر سايبر تك PC | نموذج متجر أجهزة كمبيوتر">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: Curved 4K OLED Monitor -->
+                            <div class="pc-wm-slide">
+                                <div class="pc-wm-slide-grid">
+                                    <div class="pc-wm-content">
+                                        <div class="pc-wm-tag" style="background:#eef2ff; color:#4f46e5; border-color:rgba(79, 70, 229, 0.25);">
+                                            <span class="pc-pulse-dot" style="background:#7c3aed; box-shadow:0 0 0 3px rgba(124, 58, 237, 0.25);"></span>
+                                            <span>انغماس بصري فائق 240Hz • 0.03ms</span>
+                                        </div>
+                                        <h1 class="pc-wm-title">رؤية بنقاء سينمائي –<br><span style="background:linear-gradient(135deg, #4f46e5, #7c3aed); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">شاشة QD-OLED منحنية 1800R.</span></h1>
+                                        <p class="pc-wm-desc">
+                                            شاشات QD-OLED المنحنية بدقة فائقة وتباين لانهائي 1,500,000:1، وزمن استجابة قياسي 0.03ms لسلاسة استثنائية ونقاء تفاصيل مذهل يمنحك أفضلية تنافسية في الألعاب.
+                                        </p>
+                                        <div class="pc-wm-spec-row">
+                                            <span class="pc-wm-spec-chip"><i class="fa-solid fa-tv"></i> 34" Curved 1800R</span>
+                                            <span class="pc-wm-spec-chip"><i class="fa-solid fa-gauge-high"></i> 240Hz Gaming</span>
+                                            <span class="pc-wm-spec-chip"><i class="fa-solid fa-bolt"></i> 0.03ms استجابة</span>
+                                            <span class="pc-wm-spec-chip"><i class="fa-solid fa-shield-halved"></i> ضمان ضد الحرق</span>
+                                        </div>
+                                        <div class="pc-wm-price-row">
+                                            <div class="pc-wm-price-current">3,890 ر.س</div>
+                                            <div class="pc-wm-price-old">4,490 ر.س</div>
+                                            <span class="pc-wm-save-badge">وفر 600 ر.س</span>
+                                        </div>
+                                        <div class="pc-wm-ctas">
+                                            <a href="#catalog" class="btn-pc-primary" style="background:linear-gradient(135deg, #4f46e5, #4338ca);">
+                                                <i class="fa-solid fa-desktop"></i>
+                                                <span>اقتنِ الشاشة الآن</span>
+                                            </a>
+                                            <a href="#flashDeals" class="btn-pc-secondary">
+                                                <i class="fa-solid fa-fire"></i>
+                                                <span>عروض الشاشات</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="pc-wm-visual">
+                                        <div class="pc-wm-img-wrap">
+                                            <img decoding="async" src="images/pc_hero_monitor_white.jpg" alt="شاشة ألعاب 4K OLED منحنية 1800R" title="متجر سايبر تك PC | نموذج متجر أجهزة كمبيوتر">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WoodMart Dots Pagination -->
+                    <div class="pc-wm-dots">
+                        <div class="pc-wm-dot active" onclick="goToHeroSlide(0)" id="pcDot0"></div>
+                        <div class="pc-wm-dot" onclick="goToHeroSlide(1)" id="pcDot1"></div>
+                        <div class="pc-wm-dot" onclick="goToHeroSlide(2)" id="pcDot2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. VALUE PROPOSITION ROW -->
+    <div class="pc-features-bar">
+        <div class="pc-container">
+            <div class="pc-features-grid">
+                <div class="pc-feature-item">
+                    <div class="pc-feature-icon">
+                        <i class="fa-solid fa-shield-check"></i>
+                    </div>
+                    <div class="pc-feature-info">
+                        <h4>ضمان محلي معتمد 3 سنوات</h4>
+                        <p>ضمان شامل لجميع القطع مع خدمة الصيانة المنزلية السريعة</p>
+                    </div>
+                </div>
+                <div class="pc-feature-item">
+                    <div class="pc-feature-icon" style="background:#f5f3ff; color:#7c3aed;">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <div class="pc-feature-info">
+                        <h4>تجميع واختبار إجهاد مجاني</h4>
+                        <p>نختبر كل جهاز لمدة 12 ساعة تحت أقصى ضغط لضمان الاستقرار</p>
+                    </div>
+                </div>
+                <div class="pc-feature-item">
+                    <div class="pc-feature-icon" style="background:#eef2ff; color:#4f46e5;">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div class="pc-feature-info">
+                        <h4>شحن مبرد آمن 24-48 ساعة</h4>
+                        <p>تغليف فوم هوائي عسكري معتمد يضمن وصول جهازك بأمان تام</p>
+                    </div>
+                </div>
+                <div class="pc-feature-item">
+                    <div class="pc-feature-icon" style="background:#fffbeb; color:#d97706;">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <div class="pc-feature-info">
+                        <h4>تقسيط ميسر بدون فوائد</h4>
+                        <p>قسم قيمة تجميعتك على 4 دفعات مريحة مع تابي وتمارا</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. INTERACTIVE PC BUILDER PREVIEW (INNOVATIVE FEATURE) -->
+    <section class="pc-builder-section" id="builder">
+        <div class="pc-container">
+            <div class="pc-builder-card">
+                <div class="pc-builder-header">
+                    <div class="pc-builder-title">
+                        <h3><i class="fa-solid fa-sliders" style="color:var(--color-primary);"></i> مُنشئ التجميعات الفوري (Instant PC Builder)</h3>
+                        <p style="font-size:14px; color:var(--color-muted); font-weight:600; margin-top:4px;">
+                            حدد تخصص جهازك وقطعك الرئيسية وشاهد تقدير السعر ومعدل الأداء الفوري بدقة
+                        </p>
+                    </div>
+                    <span class="pc-slide-tag" style="background:#eef2ff; color:#4f46e5; border-color:#c7d2fe;">
+                        <i class="fa-solid fa-circle-check"></i> اختبار التوافق: 100% متوافق
+                    </span>
+                </div>
+
+                <div class="pc-builder-grid">
+                    <!-- Step 1: Use Case -->
+                    <div class="pc-build-step active">
+                        <div class="pc-build-step-title"><i class="fa-solid fa-crosshairs"></i> الغرض الأساسي</div>
+                        <select class="pc-build-select" id="buildPurpose" onchange="calculatePcBuild()">
+                            <option value="gaming" data-price="0" data-fps="240">ألعاب احترافية بدقة 4K ورياضات إلكترونية</option>
+                            <option value="creator" data-price="800" data-fps="210">مونتاج فيديو 8K وتصميم 3D ومؤثرات</option>
+                            <option value="ai" data-price="1500" data-fps="260">برمجة ونماذج ذكاء اصطناعي (AI & LLM)</option>
+                            <option value="office" data-price="-2000" data-fps="144">أعمال مكتبية وهندسة يومية</option>
+                        </select>
+                    </div>
+
+                    <!-- Step 2: CPU -->
+                    <div class="pc-build-step active">
+                        <div class="pc-build-step-title"><i class="fa-solid fa-microchip"></i> المعالج المركزي (CPU)</div>
+                        <select class="pc-build-select" id="buildCpu" onchange="calculatePcBuild()">
+                            <option value="i9" data-price="2600" data-fps="50">Intel Core i9-14900KS (24 Cores)</option>
+                            <option value="ryzen9" data-price="2450" data-fps="55">AMD Ryzen 9 7950X3D (16 Cores 3D)</option>
+                            <option value="i7" data-price="1650" data-fps="35">Intel Core i7-14700K (20 Cores)</option>
+                            <option value="ryzen7" data-price="1500" data-fps="40">AMD Ryzen 7 7800X3D (Gaming King)</option>
+                        </select>
+                    </div>
+
+                    <!-- Step 3: GPU -->
+                    <div class="pc-build-step active">
+                        <div class="pc-build-step-title"><i class="fa-solid fa-vr-cardboard"></i> كرت الشاشة (GPU)</div>
+                        <select class="pc-build-select" id="buildGpu" onchange="calculatePcBuild()">
+                            <option value="rtx4090" data-price="8400" data-fps="120">NVIDIA GeForce RTX 4090 24GB</option>
+                            <option value="rtx4080s" data-price="4800" data-fps="95" selected>NVIDIA GeForce RTX 4080 Super 16GB</option>
+                            <option value="rtx4070tis" data-price="3500" data-fps="75">NVIDIA GeForce RTX 4070 Ti Super 16GB</option>
+                            <option value="rtx4070" data-price="2400" data-fps="55">NVIDIA GeForce RTX 4070 12GB</option>
+                        </select>
+                    </div>
+
+                    <!-- Step 4: Cooling & RAM -->
+                    <div class="pc-build-step active">
+                        <div class="pc-build-step-title"><i class="fa-solid fa-fan"></i> التبريد والذاكرة</div>
+                        <select class="pc-build-select" id="buildRamCool" onchange="calculatePcBuild()">
+                            <option value="opt1" data-price="1900" data-fps="20">64GB DDR5 6000MHz + تبريد مائي 360mm RGB</option>
+                            <option value="opt2" data-price="1300" data-fps="15">32GB DDR5 6000MHz + تبريد مائي 240mm RGB</option>
+                            <option value="opt3" data-price="2800" data-fps="25">128GB DDR5 6000MHz (محطات عمل استثنائية)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Builder Summary Bar -->
+                <div class="pc-builder-summary">
+                    <div class="pc-fps-badge">
+                        <div class="pc-fps-circle">
+                            <span id="buildFpsDisplay">240+</span>
+                            <small>FPS 4K</small>
+                        </div>
+                        <div>
+                            <div style="font-weight:900; font-size:16px; color:var(--color-navy);">أداء خيالي على كافة الألعاب والبرامج</div>
+                            <div style="font-size:12.5px; color:#4f46e5; font-weight:700;">درجة حرارة مستقرة تحت 65°C بفضل التبريد المائي</div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; align-items:center; gap:24px; flex-wrap:wrap;">
+                        <div class="pc-builder-price-box">
+                            <span style="font-size:13.5px; font-weight:700; color:var(--color-muted);">السعر التقديري الشامل:</span>
+                            <span class="pc-builder-price" id="buildTotalPrice">11,850 ر.س</span>
+                        </div>
+                        <button class="btn-pc-primary" onclick="orderCustomBuild()">
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <span>طلب تجميع هذا الجهاز فوراً</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. QUICK CATEGORIES -->
+    <section class="pc-section">
+        <div class="pc-container">
+            <div class="pc-section-header">
+                <div class="pc-section-title-box">
+                    <span class="pc-section-subtitle">تصنيفات العتاد الاحترافي</span>
+                    <h2 class="pc-section-title">أقسام أجهزة الكمبيوتر والهاردوير</h2>
+                </div>
+                <a href="#catalog" class="btn-pc-secondary" style="padding: 10px 20px; font-size: 13.5px;" onclick="filterPcCategory('all')">
+                    <span>عرض كافة العتاد</span>
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+            </div>
+
+            <div class="pc-categories-grid">
+                <div class="pc-cat-card" onclick="filterPcCategory('rigs')">
+                    <div class="pc-cat-icon">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h3 class="pc-cat-name">تجميعات الجيمنج 4K</h3>
+                    <span class="pc-cat-count">24 جهاز متوفر</span>
+                </div>
+                <div class="pc-cat-card" onclick="filterPcCategory('laptops')">
+                    <div class="pc-cat-icon" style="background:var(--color-violet-light); color:var(--color-violet);">
+                        <i class="fa-solid fa-laptop"></i>
+                    </div>
+                    <h3 class="pc-cat-name">لابتوبات المحترفين</h3>
+                    <span class="pc-cat-count">16 موديل</span>
+                </div>
+                <div class="pc-cat-card" onclick="filterPcCategory('monitors')">
+                    <div class="pc-cat-icon" style="background:#f5f3ff; color:#7c3aed;">
+                        <i class="fa-solid fa-tv"></i>
+                    </div>
+                    <h3 class="pc-cat-name">شاشات OLED منحنية</h3>
+                    <span class="pc-cat-count">19 شاشة</span>
+                </div>
+                <div class="pc-cat-card" onclick="filterPcCategory('hardware')">
+                    <div class="pc-cat-icon" style="background:#fffbeb; color:#d97706;">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="pc-cat-name">معالجات وكروت شاشة</h3>
+                    <span class="pc-cat-count">38 قطعة أصلية</span>
+                </div>
+                <div class="pc-cat-card" onclick="filterPcCategory('accessories')">
+                    <div class="pc-cat-icon" style="background:#eff6ff; color:#2563eb;">
+                        <i class="fa-solid fa-keyboard"></i>
+                    </div>
+                    <h3 class="pc-cat-name">ملحقات وكيبورد ميكانيكي</h3>
+                    <span class="pc-cat-count">42 ملحق فاخر</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FLASH DEALS SLIDER (EXACT 4 CARDS, WORKING ARROWS) -->
+    <section class="pc-flash-section" id="flashDeals">
+        <div class="pc-container">
+            <div class="pc-flash-header">
+                <div>
+                    <div class="pc-section-subtitle" style="color: #dc2626;"><i class="fa-solid fa-bolt"></i> صفقات الهاردوير الخاطفة</div>
+                    <h2 class="pc-section-title">عروض أجهزة الكمبيوتر اليومية</h2>
+                </div>
+                <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                    <!-- Countdown Timer -->
+                    <div class="pc-flash-timer-box">
+                        <span class="pc-flash-timer-label"><i class="fa-regular fa-clock"></i> ينتهي العرض خلال:</span>
+                        <div class="pc-countdown">
+                            <div class="pc-countdown-unit" id="pccd-hours">09</div>
+                            <span>:</span>
+                            <div class="pc-countdown-unit" id="pccd-minutes">42</div>
+                            <span>:</span>
+                            <div class="pc-countdown-unit" id="pccd-seconds">15</div>
+                        </div>
+                    </div>
+                    <!-- Navigation Arrows -->
+                    <div class="pc-arrows-group">
+                        <button class="pc-arrow-btn" onclick="slidePcPrev()" aria-label="السابق" title="السابق">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <button class="pc-arrow-btn" onclick="slidePcNext()" aria-label="التالي" title="التالي">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Viewport (4 visible cards on desktop) -->
+            <div class="pc-slider-viewport">
+                <div class="pc-slider-track" id="pcSliderTrack">
+                    <!-- Item 1: White Liquid Rig -->
+                    <div class="pc-slider-item">
+                        <div class="pc-card">
+                            <span class="pc-card-badge">وفر 1,400 ر.س</span>
+                            <div class="pc-card-img-box">
+                                <img decoding="async" src="images/pc_prod_white_rig.jpg" alt="تجميعة ألعاب ألترا وايت ريج" title="متجر سايبر تك PC | نموذج متجر أجهزة كمبيوتر">
+                            </div>
+                            <div class="pc-card-body">
+                                <div>
+                                    <div class="pc-card-cat">تجميعات النخبة 4K</div>
+                                    <h4 class="pc-card-title">تجميعة ألترا وايت ريج مائية RTX 4080 Super</h4>
+                                    <div class="pc-card-specs">
+                                        <span class="pc-spec-tag">Core i9-14900KS</span>
+                                        <span class="pc-spec-tag">64GB DDR5</span>
+                                    </div>
+                                    <div class="pc-card-stock">
+                                        <div class="pc-stock-bar"><div class="pc-stock-fill" style="width: 25%;"></div></div>
+                                        <span>باقي 2 فقط في المستودع</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="pc-card-pricing">
+                                        <span class="pc-price-current">12,600 ر.س</span>
+                                        <span class="pc-price-old">14,000 ر.س</span>
+                                    </div>
+                                    <div class="pc-card-actions">
+                    <button class="pc-btn-add" onclick="addPcToCart('تجميعة ألترا وايت ريج مائية RTX 4080 Super', 12600, 'images/pc_prod_white_rig.jpg')">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span>إضافة للسلة</span>
+                    </button>
+                    <a href="product?id=1" class="pc-btn-view">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>عرض المنتج</span>
+                    </a>
+                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Aether Studio Laptop -->
+                    <div class="pc-slider-item">
+                        <div class="pc-card">
+                            <span class="pc-card-badge" style="background:linear-gradient(135deg, #7c3aed, #4f46e5);">وفر 950 ر.س</span>
+                            <div class="pc-card-img-box">
+                                <img decoding="async" src="images/pc_prod_laptop_pro.jpg" alt="لابتوب إيثر ستوديو برو" title="متجر سايبر تك PC | نموذج متجر أجهزة كمبيوتر">
+                            </div>
+                            <div class="pc-card-body">
+                                <div>
+                                    <div class="pc-card-cat">لابتوبات المحترفين</div>
+                                    <h4 class="pc-card-title">لابتوب إيثر برو ستوديو 16 إنش OLED 240Hz</h4>
+                                    <div class="pc-card-specs">
+                                        <span class="pc-spec-tag">RTX 4080 12GB</span>
+                                        <span class="pc-spec-tag">32GB RAM</span>
+                                    </div>
+                                    <div class="pc-card-stock">
+                                        <div class="pc-stock-bar"><div class="pc-stock-fill" style="width: 40%;"></div></div>
+                                        <span>باقي 4 أجهزة فقط</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="pc-card-pricing">
+                                        <span class="pc-price-current">9,850 ر.س</span>
+                                        <span class="pc-price-old">10,800 ر.س</span>
+                                    </div>
+                                    <div class="pc-card-actions">
+                    <button class="pc-btn-add" onclick="addPcToCart('لابتوب إيثر برو ستوديو 16 إنش OLED 240Hz', 9850, 'images/pc_prod_laptop_pro.jpg')">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span>إضافة للسلة</span>
+                    </button>
+                    <a href="product?id=2" class="pc-btn-view">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>عرض المنتج</span>
+                    </a>
+                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Curved OLED Monitor -->
+                    <div class="pc-slider-item">
+                        <div class="pc-card">
+                            <span class="pc-card-badge">وفر 600 ر.س</span>
+                            <div class="pc-card-img-box">
+                                <img decoding="async" src="images/pc_hero_monitor_white.jpg" alt="شاشة ألترا فيود المنحنية" title="متجر سايبر تك PC | نموذج متجر أجهزة كمبيوتر">
+                            </div>
+                            <div class="pc-card-body">
+                                <div>
+                                    <div class="pc-card-cat">شاشات العرض الاحترافية</div>
+                                    <h4 class="pc-card-title">شاشة قيمنق منحنية 34 بوصة QD-OLED 240Hz</h4>
+                                    <div class="pc-card-specs">
+                                        <span class="pc-spec-tag">0.03ms Response</span>
+                                        <span class="pc-spec-tag">HDR True Black</span>
+                                    </div>
+                                    <div class="pc-card-stock">
+                                        <div class="pc-stock-bar"><div class="pc-stock-fill" style="width: 60%;"></div></div>
+                                        <span>متاح 6 شاشات</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="pc-card-pricing">
+                                        <span class="pc-price-current">3,890 ر.س</span>
+                                        <span class="pc-price-old">4,490 ر.س</span>
+                                    </div>
+                                    <div class="pc-card-actions">
+                    <button class="pc-btn-add" onclick="addPcToCart('شاشة قيمنق منحنية 34 بوصة QD-OLED 240Hz', 3890, 'images/pc_hero_monitor_white.jpg')">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span>إضافة للسلة</span>
+                    </button>
+                    <a href="product?id=3" class="pc-btn-view">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>عرض المنتج</span>
+                    </a>
+                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Master Desktop PC -->
+                    <div class="pc-slider-item">
+                        <div class="pc-card">
+                            <span class="pc-card-badge" style="background:linear-gradient(135deg, #4f46e5, #7c3aed);">الإصدار الرائد</span>
+                            <div class="pc-card-img-box">
+                                <img decoding="async" src="images/pc_hero_rig_white.jpg" alt="كمبيوتر محطة عمل ألترا ماستر" title="متجر سايبر تك PC | نموذج متجر أجهزة كمبيوتر">
+                            </div>
+                            <div class="pc-card-body">
+                                <div>
+                                    <div class="pc-card-cat">محطات العمل الفائقة</div>
+                                    <h4 class="pc-card-title">كمبيوتر ألترا ماستر تبريد صلب مخصص RTX 4090</h4>
+                                    <div class="pc-card-specs">
+                                        <span class="pc-spec-tag">24GB VRAM</span>
+                                        <span class="pc-spec-tag">Ryzen 9 7950X3D</span>
+                                    </div>
+                                    <div class="pc-card-stock">
+                                        <div class="pc-stock-bar"><div class="pc-stock-fill" style="width: 15%;"></div></div>
+                                        <span>قطعة واحدة فقط متوفرة</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="pc-card-pricing">
+                                        <span class="pc-price-current">18,500 ر.س</span>
+                                        <span class="pc-price-old">21,000 ر.س</span>
+                                    </div>
+                                    <div class="pc-card-actions">
+                    <button class="pc-btn-add" onclick="addPcToCart('كمبيوتر ألترا ماستر تبريد صلب مخصص RTX 4090', 18500, 'images/pc_hero_rig_white.jpg')">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span>إضافة للسلة</span>
+                    </button>
+                    <a href="product?id=4" class="pc-btn-view">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>عرض المنتج</span>
+                    </a>
+                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Studio Headphones Bundle -->
+                    <div class="pc-slider-item">
+                        <div class="pc-card">
+                            <span class="pc-card-badge">وفر 300 ر.س</span>
+                            <div class="pc-card-img-box">
+                                <img decoding="async" src="images/prod_silver_headphones.jpg" alt="سماعات محترفي الألعاب ANC" title="متجر سايبر تك PC | نموذج متجر أجهزة كمبيوتر">
+                            </div>
+                            <div class="pc-card-body">
+                                <div>
+                                    <div class="pc-card-cat">صوتيات المحترفين</div>
+                                    <h4 class="pc-card-title">سماعات رأس محيطية بدقة 7.1 صوت استوديو</h4>
+                                    <div class="pc-card-specs">
+                                        <span class="pc-spec-tag">Hi-Res Audio</span>
+                                        <span class="pc-spec-tag">ميكروفون عازل</span>
+                                    </div>
+                                    <div class="pc-card-stock">
+                                        <div class="pc-stock-bar"><div class="pc-stock-fill" style="width: 80%;"></div></div>
+                                        <span>متوفر بالمستودع</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="pc-card-pricing">
+                                        <span class="pc-price-current">950 ر.س</span>
+                                        <span class="pc-price-old">1,250 ر.س</span>
+                                    </div>
+                                    <div class="pc-card-actions">
+                    <button class="pc-btn-add" onclick="addPcToCart('سماعات رأس محيطية بدقة 7.1 صوت استوديو', 950, 'images/prod_silver_headphones.jpg')">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span>إضافة للسلة</span>
+                    </button>
+                    <a href="product?id=5" class="pc-btn-view">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>عرض المنتج</span>
+                    </a>
+                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Magnetic Fast Charging Stand -->
+                    <div class="pc-slider-item">
+                        <div class="pc-card">
+                            <span class="pc-card-badge">وفر 100 ر.س</span>
+                            <div class="pc-card-img-box">
+                                <img decoding="async" src="images/prod_wireless_charger.jpg" alt="محطة شحن مكتبية ذكية" title="متجر سايبر تك PC | نموذج متجر أجهزة كمبيوتر">
+                            </div>
+                            <div class="pc-card-body">
+                                <div>
+                                    <div class="pc-card-cat">ملحقات المكتب</div>
+                                    <h4 class="pc-card-title">محطة شحن مكتبية MagSafe 3 في 1 ألمنيوم</h4>
+                                    <div class="pc-card-specs">
+                                        <span class="pc-spec-tag">شحن سريع 25W</span>
+                                        <span class="pc-spec-tag">حماية حرارية</span>
+                                    </div>
+                                    <div class="pc-card-stock">
+                                        <div class="pc-stock-bar"><div class="pc-stock-fill" style="width: 50%;"></div></div>
+                                        <span>متوفر 5 قطع</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="pc-card-pricing">
+                                        <span class="pc-price-current">290 ر.س</span>
+                                        <span class="pc-price-old">390 ر.س</span>
+                                    </div>
+                                    <div class="pc-card-actions">
+                    <button class="pc-btn-add" onclick="addPcToCart('محطة شحن مكتبية MagSafe 3 في 1 ألمنيوم', 290, 'images/prod_wireless_charger.jpg')">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span>إضافة للسلة</span>
+                    </button>
+                    <a href="product?id=6" class="pc-btn-view">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>عرض المنتج</span>
+                    </a>
+                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. MAIN CATALOG WITH ADVANCED FILTER SIDEBAR -->
+    <section class="pc-section" id="catalog">
+        <div class="pc-container">
+            <div class="pc-catalog-layout">
+                <!-- Filter Sidebar -->
+                <aside class="pc-sidebar">
+                    <h3 class="pc-sidebar-title">
+                        <i class="fa-solid fa-sliders" style="color: var(--color-primary);"></i>
+                        <span>تصفية أجهزة العتاد</span>
+                    </h3>
+
+                    <!-- Categories Filter -->
+                    <div class="pc-filter-group">
+                        <label class="pc-filter-label">نوع العتاد</label>
+                        <div class="pc-filter-cats">
+                            <button class="pc-filter-cat-btn active" onclick="filterPcCategory('all', this)">
+                                <span>كافة الأجهزة والقطع</span>
+                                <span class="badge" id="pcbadge-all">11</span>
+                            </button>
+                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('rigs', this)">
+                                <span>تجميعات كمبيوتر مكتبي</span>
+                                <span class="badge" id="pcbadge-rigs">2</span>
+                            </button>
+                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('laptops', this)">
+                                <span>لابتوبات احترافية</span>
+                                <span class="badge" id="pcbadge-laptops">1</span>
+                            </button>
+                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('monitors', this)">
+                                <span>شاشات ألعاب OLED</span>
+                                <span class="badge" id="pcbadge-monitors">1</span>
+                            </button>
+                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('gpus', this)">
+                                <span>كروت الشاشة RTX</span>
+                                <span class="badge" id="pcbadge-gpus">1</span>
+                            </button>
+                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('cpus', this)">
+                                <span>المعالجات المركزية</span>
+                                <span class="badge" id="pcbadge-cpus">1</span>
+                            </button>
+                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('cooling', this)">
+                                <span>التبريد المائي السائل</span>
+                                <span class="badge" id="pcbadge-cooling">1</span>
+                            </button>
+                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('storage', this)">
+                                <span>ذواكر DDR5 والتخزين</span>
+                                <span class="badge" id="pcbadge-storage">1</span>
+                            </button>
+                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('cases', this)">
+                                <span>صناديق الكيس والباور</span>
+                                <span class="badge" id="pcbadge-cases">1</span>
+                            </button>
+                            <button class="pc-filter-cat-btn" onclick="filterPcCategory('accessories', this)">
+                                <span>ملحقات وإكسسوارات</span>
+                                <span class="badge" id="pcbadge-accessories">2</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Sort Options -->
+                    <div class="pc-filter-group">
+                        <label class="pc-filter-label">ترتيب حسب الأولويات</label>
+                        <div class="pc-sort-grid">
+                            <button class="pc-sort-btn active" onclick="sortPcProducts('featured', this)">الأعلى أداءً</button>
+                            <button class="pc-sort-btn" onclick="sortPcProducts('bestseller', this)">الأكثر طلباً</button>
+                            <button class="pc-sort-btn" onclick="sortPcProducts('price-desc', this)">الأعلى سعراً</button>
+                            <button class="pc-sort-btn" onclick="sortPcProducts('price-asc', this)">الأقل سعراً</button>
+                        </div>
+                    </div>
+
+                    <!-- Price Slider -->
+                    <div class="pc-filter-group">
+                        <label class="pc-filter-label">السعر الأقصى</label>
+                        <input type="range" class="pc-build-select" id="pcPriceRange" min="200" max="20000" step="500" value="20000" oninput="filterPcByPrice(this.value)" style="padding:0; height:8px; accent-color:var(--color-primary);">
+                        <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:800; color:var(--color-slate); margin-top:8px;">
+                            <span>200 ر.س</span>
+                            <span id="pcPriceDisplay" style="color: var(--color-primary); font-weight: 900;">20,000 ر.س</span>
+                        </div>
+                    </div>
+
+                    <!-- Features Checklist -->
+                    <div class="pc-filter-group" style="margin-bottom: 0;">
+                        <label class="pc-filter-label">مزايا العتاد الإضافية</label>
+                        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; font-weight: 700; color: var(--color-slate);">
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" checked style="accent-color: var(--color-primary);"> تبريد مائي مدمج
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" checked style="accent-color: var(--color-primary);"> جاهز للشحن الفوري
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" checked style="accent-color: var(--color-primary);"> ضمان محلي 3 سنوات
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Grid Container -->
+                <main>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; font-size:14px; font-weight:800; color:var(--color-slate); flex-wrap:wrap; gap:12px;">
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <span>القسم النشط:</span>
+                            <span id="pcActiveCategoryTitle" style="color:var(--color-primary); background:#eef2ff; padding:3px 14px; border-radius:50px; border:1px solid rgba(79,70,229,0.25); font-weight:900;">كافة الأجهزة وقطع العتاد</span>
+                            <span style="color:#64748b; font-size:12.5px;">(<span id="pcProductCount" style="color:var(--color-primary); font-weight:900;">11</span> منتج متاح)</span>
+                        </div>
+                        <div style="color:#4f46e5; background:#f5f3ff; padding:4px 14px; border-radius:50px; font-size:12px; font-weight:800;"><i class="fa-solid fa-circle-check" style="color:#7c3aed;"></i> فحص الجودة والتجميع معتمد 100%</div>
+                    </div>
+
+                    <div class="pc-products-grid" id="pcProductsGrid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. VERIFIED CUSTOMER REVIEWS -->
+    <section class="pc-reviews-section">
+        <div class="pc-container">
+            <div class="pc-section-header" style="text-align: center; justify-content: center;">
+                <div class="pc-section-title-box" style="align-items: center;">
+                    <span class="pc-section-subtitle">تقييمات مجتمع اللاعبين وصناع المحتوى</span>
+                    <h2 class="pc-section-title">ماذا يقول عملاؤنا في المملكة عن عتاد ألترا بي سي؟</h2>
+                </div>
+            </div>
+
+            <div class="pc-reviews-grid">
+                <div class="pc-review-card">
+                    <div style="color: #f59e0b; display: flex; gap: 4px; font-size: 14px;">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p style="font-size: 14px; color: var(--color-slate); line-height: 1.7; font-weight: 600;">
+                        "طلبت تجميعة White Rig بكرت RTX 4080 Super، التغليف الفوم كان خرافياً، ترتيب الأسلاك تحفة فنية، والجهاز شغال بدرجة حرارة ما تعدت 58 درجة في أثقل ألعاب 4K. سرعة التوصيل بالرياض 24 ساعة فقط!"
+                    </p>
+                    <div class="pc-review-author">
+                        <div class="pc-avatar">س.ع</div>
+                        <div class="pc-author-info">
+                            <h5>سلطان العتيبي</h5>
+                            <span><i class="fa-solid fa-circle-check"></i> مشتري موثق • الرياض</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pc-review-card">
+                    <div style="color: #f59e0b; display: flex; gap: 4px; font-size: 14px;">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p style="font-size: 14px; color: var(--color-slate); line-height: 1.7; font-weight: 600;">
+                        "كمصمم وممنتج 3D في جدة، لابتوب Aether Studio حل لي أزمة الرندرة أثناء التنقل. شاشة الـ OLED دقيقة جداً في الألوان وخدمة العملاء متجاوبين لأبعد حد بالواتساب مع توفير الفاتورة الضريبية فوراً."
+                    </p>
+                    <div class="pc-review-author">
+                        <div class="pc-avatar" style="background:linear-gradient(135deg, #4f46e5, #7c3aed);">م.غ</div>
+                        <div class="pc-author-info">
+                            <h5>م. ماجد الغامدي</h5>
+                            <span><i class="fa-solid fa-circle-check"></i> مشتري موثق • جدة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pc-review-card">
+                    <div style="color: #f59e0b; display: flex; gap: 4px; font-size: 14px;">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p style="font-size: 14px; color: var(--color-slate); line-height: 1.7; font-weight: 600;">
+                        "الشاشة الـ OLED 34 بوصة نقلت تجربة اللعب لمستوى ثاني تماماً، سواد حقيقي وألوان رهيبة، والأجمل وجود ضمان 3 سنوات محلي معتمد يعطيك راحة بال تامة. متجر يُعتمد عليه وبقوة."
+                    </p>
+                    <div class="pc-review-author">
+                        <div class="pc-avatar" style="background:linear-gradient(135deg, #f59e0b, #d97706);">ف.ش</div>
+                        <div class="pc-author-info">
+                            <h5>فيصل الشمري</h5>
+                            <span><i class="fa-solid fa-circle-check"></i> مشتري موثق • الخبر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. EXECUTIVE FOOTER -->
+    <footer class="pc-footer">
+        <div class="pc-container">
+            <div class="pc-footer-grid">
+                <!-- Col 1 -->
+                <div class="pc-footer-col">
+                    <div class="pc-logo-link" style="margin-bottom: 16px;">
+                        <div class="pc-logo-icon">
+                            <i class="fa-solid fa-computer"></i>
+                        </div>
+                        <div class="pc-logo-text">
+                            <span class="pc-logo-title">ألترا بي سي</span>
+                            <span class="pc-logo-sub">ULTRA PC COMPUTING</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 14px; color: #1e293b !important; font-weight: 600; line-height: 1.8; margin-bottom: 20px;">
+                        المتجر السعودي المتخصص في تقديم أقوى تجميعات أجهزة الكمبيوتر، اللابتوبات الاحترافية، ومحطات عمل الذكاء الاصطناعي مع ضمان محلي 3 سنوات وتجميع فني دقيق خاضع لاختبارات الإجهاد.
+                    </p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <span class="pc-payment-badge"><i class="fa-brands fa-whatsapp" style="color: #22c55e;"></i> دعم هندسي 24/7</span>
+                        <span class="pc-payment-badge"><i class="fa-solid fa-shield-halved" style="color: #4f46e5;"></i> سجل تجاري وضمان معتمد</span>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="pc-footer-col">
+                    <h4>أقسام العتاد والكمبيوتر</h4>
+                    <ul class="pc-footer-links">
+                        <li><a href="#catalog" onclick="filterPcCategory('rigs')">تجميعات الجيمنج 4K</a></li>
+                        <li><a href="#catalog" onclick="filterPcCategory('laptops')">لابتوبات الأعمال والمونتاج</a></li>
+                        <li><a href="#catalog" onclick="filterPcCategory('monitors')">شاشات العرض والـ OLED</a></li>
+                        <li><a href="#catalog" onclick="filterPcCategory('hardware')">المعالجات وكروت الشاشة</a></li>
+                        <li><a href="#catalog" onclick="filterPcCategory('accessories')">الكيبورد والملحقات الميكانيكية</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="pc-footer-col">
+                    <h4>الدعم وخدمة العملاء</h4>
+                    <ul class="pc-footer-links">
+                        <li><a href="#builder">أداة تجميع الكمبيوتر التفاعلية</a></li>
+                        <li><a href="javascript:void(0)" onclick="openCompatibilityModal()">فحص التوافق وقطع الغيار</a></li>
+                        <li><a href="#terms">سياسة الضمان والاستبدال 3 سنوات</a></li>
+                        <li><a href="#shipping">طرق الشحن المبرد ومدة التوصيل</a></li>
+                        <li><a href="#payment">خطط التقسيط بدون فوائد (تابي وتمارا)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="pc-footer-col">
+                    <h4>عروض العتاد والتخفيضات</h4>
+                    <p style="font-size: 13.5px; color: #1e293b !important; font-weight: 600; margin-bottom: 12px;">
+                        اشترك في نشرة النخبة واحصل على خصم فوري بقيمة <strong style="color: #090d16;">100 ر.س</strong> على تجميعتك الأولى.
+                    </p>
+                    <form class="pc-newsletter-form" onsubmit="event.preventDefault(); showToast('تم الاشتراك بنجاح! كود خصمك: ULTRAPC100 🚀');">
+                        <input type="email" required class="pc-newsletter-input" placeholder="أدخل بريدك الإلكتروني...">
+                        <button type="submit" class="pc-newsletter-btn">اشتراك</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="pc-footer-bottom">
+                <div style="color: #1e293b !important; font-weight: 600;">
+                    جميع الحقوق محفوظة © 2026 <strong style="color: #090d16 !important;">متجر ألترا بي سي الإلكتروني</strong> | تصميم وتطوير احترافي بواسطة <a href="https://entejsites.com/%d8%aa%d8%b5%d9%85%d9%8a%d9%85-%d9%85%d9%88%d8%a7%d9%82%d8%b9/%d8%aa%d8%b5%d9%85%d9%8a%d9%85-%d9%88%d8%a8%d8%b1%d9%85%d8%ac%d8%a9-%d8%a7%d9%84%d9%85%d8%aa%d8%a7%d8%ac%d8%b1-%d8%a7%d9%84%d8%a7%d9%84%d9%83%d8%aa%d8%b1%d9%88%d9%86%d9%8a%d8%a9-ecommerce/" style="color: #4f46e5 !important; font-weight: 900; text-decoration: underline;">شركة إنتاج لتصميم وبرمجة المتاجر الإلكترونية</a>
+                </div>
+                <div class="pc-payment-icons">
+                    <span class="pc-payment-badge">مدى Mada</span>
+                    <span class="pc-payment-badge">Visa / Mastercard</span>
+                    <span class="pc-payment-badge">Apple Pay</span>
+                    <span class="pc-payment-badge">Tabby تابي</span>
+                    <span class="pc-payment-badge">Tamara تمارا</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201027093535" target="_blank" class="tech-floating-whatsapp" style="position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; background: #25d366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5); z-index: 9999; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="تواصل عبر واتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/store.js"></script>
+</body>
+</html>

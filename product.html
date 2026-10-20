@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">تفاصيل العتاد | سايبر تك PC</title>
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 Pro / Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .product-detail-section { padding: 40px 0 60px; background: #f8fafc; }
+        .product-detail-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; background: #fff; padding: 40px; border-radius: 24px; border: 1.5px solid #e2e8f0; box-shadow: 0 10px 30px rgba(15,23,42,0.04); }
+        .product-gallery-main { width: 100%; height: 420px; background: #f8fafc; border-radius: 20px; display: flex; align-items: center; justify-content: center; padding: 30px; border: 1px solid #e2e8f0; position: relative; overflow: hidden; }
+        .product-gallery-main img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .product-badge-lg { position: absolute; top: 20px; right: 20px; background: linear-gradient(135deg, #4f46e5, #4338ca); color: #fff; font-size: 13px; font-weight: 800; padding: 6px 16px; border-radius: 50px; }
+        .product-info-col { display: flex; flex-direction: column; justify-content: space-between; }
+        .product-cat-tag { font-size: 14px; font-weight: 700; color: #4f46e5; margin-bottom: 8px; }
+        .product-title-lg { font-size: 28px; font-weight: 900; color: #0f172a; line-height: 1.35; margin-bottom: 14px; }
+        .product-pricing-box { display: flex; align-items: baseline; gap: 14px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1.5px solid #f1f5f9; }
+        .price-current-lg { font-size: 32px; font-weight: 900; color: #4f46e5; }
+        .price-old-lg { font-size: 18px; color: #94a3b8; text-decoration: line-through; }
+        .specs-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+        .spec-chip { background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; padding: 6px 14px; border-radius: 8px; font-size: 13.5px; font-weight: 700; }
+        .action-btns-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+        .btn-add-cart-lg { background: #4f46e5; color: #fff; border: none; padding: 16px; border-radius: 14px; font-size: 16px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.25s; box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35); font-family: inherit; }
+        .btn-add-cart-lg:hover { background: #4338ca; transform: translateY(-2px); }
+        .btn-wa-order-lg { background: #22c55e; color: #fff; border: none; padding: 16px; border-radius: 14px; font-size: 16px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; transition: 0.25s; box-shadow: 0 6px 20px rgba(34, 197, 94, 0.3); font-family: inherit; }
+        .btn-wa-order-lg:hover { background: #16a34a; transform: translateY(-2px); }
+        .policy-banner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 30px; padding: 18px; background: #f8fafc; border-radius: 16px; border: 1px solid #e2e8f0; }
+        .policy-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; color: #334155; }
+        .policy-item i { font-size: 20px; color: #4f46e5; }
+        @media (max-width: 900px) {
+            .product-detail-layout { grid-template-columns: 1fr; gap: 28px; padding: 24px; }
+            .product-gallery-main { height: 300px; }
+            .policy-banner { grid-template-columns: 1fr 1fr; }
+            .action-btns-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOPBAR -->
+    <div class="pc-topbar">
+        <div class="pc-container">
+            <div class="pc-topbar-inner">
+                <div class="pc-topbar-text">
+                    <i class="fa-solid fa-bolt" style="color: var(--color-accent-amber);"></i>
+                    <span>عروض ألترا بي سي الكبرى: شحن مجاني لكافة التجميعات + ضمان استبدال فوري سنتين!</span>
+                </div>
+                <div class="pc-top-links">
+                    <a href="index.html#builder"><i class="fa-solid fa-screwdriver-wrench"></i> بناء تجميعة مخصصة</a>
+                    <a href="admin/index.html"><i class="fa-solid fa-lock"></i> لوحة الإدارة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="pc-header">
+        <div class="pc-container">
+            <div class="pc-header-main">
+                <a href="index.html" class="pc-logo-link">
+                    <div class="pc-logo-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="pc-logo-text"><span class="pc-logo-title">سايبر تك PC</span><span class="pc-logo-sub">CYBERTECH & GAMING STORE</span></div>
+                </a>
+                <div class="pc-header-actions" style="margin-right: auto;">
+                    <a href="admin/index.html" class="pc-action-btn" title="لوحة التحكم الإدارية" style="background: rgba(79, 70, 229, 0.12); color: #4f46e5; font-weight: 700; border-radius: 12px; border: 1px solid rgba(79, 70, 229, 0.3);">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </a>
+                    <div class="pc-action-btn" onclick="togglePcCartDrawer()">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>سلة العتاد</span>
+                        <span class="pc-action-badge" id="pcCartBadge">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pc-navbar">
+            <div class="pc-container">
+                <div class="pc-navbar-inner">
+                    <ul class="pc-nav-menu">
+                        <li class="pc-nav-item"><a href="category?cat=all" class="pc-nav-mega-btn"><i class="fa-solid fa-layer-group"></i> <span>كافة أقسام الهاردوير</span></a></li>
+                        <li class="pc-nav-item"><a href="index.html">الرئيسية</a></li>
+                        <li class="pc-nav-item"><a href="index.html#builder">بناء تجميعة مخصصة</a></li>
+                        <li class="pc-nav-item"><a href="shop.html">المتجر والقطع</a></li>
+                        <li class="pc-nav-item"><a href="about.html">من نحن</a></li>
+                        <li class="pc-nav-item"><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PRODUCT DETAIL MAIN -->
+    <main class="product-detail-section">
+        <div class="pc-container">
+            <div style="margin-bottom: 20px; font-size: 14px; color: #64748b;">
+                <a href="index.html" style="color:#64748b; text-decoration:none;">الرئيسية</a> / 
+                <a href="category?cat=all" id="prodBreadcrumbCat" style="color:#64748b; text-decoration:none;">العتاد</a> / 
+                <span id="prodBreadcrumbTitle" style="color:#0f172a; font-weight:700;">اسم الجهاز</span>
+            </div>
+
+            <div class="product-detail-layout">
+                <!-- Gallery Col -->
+                <div class="product-gallery-main">
+                    <span id="prodBadge" class="product-badge-lg">جديد 2026</span>
+                    <img id="prodMainImg" src="images/pc_hero_rig_white.jpg" alt="صورة الجهاز">
+                </div>
+
+                <!-- Info Col -->
+                <div class="product-info-col">
+                    <div>
+                        <div id="prodCategory" class="product-cat-tag">تجميعات الجيمنج 4K</div>
+                        <h1 id="prodTitle" class="product-title-lg">تجميعة ألترا وايت ريج مائية RTX 4080 Super</h1>
+                        
+                        <div class="product-pricing-box">
+                            <span id="prodPrice" class="price-current-lg">12,600 ر.س</span>
+                            <span id="prodOldPrice" class="price-old-lg">14,000 ر.س</span>
+                        </div>
+
+                        <div style="font-size: 14px; font-weight: 800; color: #1e293b; margin-bottom: 8px;">أبرز المواصفات الفنية:</div>
+                        <div id="prodSpecsContainer" class="specs-chips">
+                            <span class="spec-chip">Ryzen 7 7800X3D</span>
+                            <span class="spec-chip">RTX 4080 Super 16GB</span>
+                            <span class="spec-chip">RAM 32GB DDR5</span>
+                        </div>
+
+                        <p style="font-size: 14.5px; color: #475569; line-height: 1.7; margin-bottom: 20px;">
+                            تم تجميع هذا الجهاز واختبار استقراره الحراري بواسطة مهندسينا مع كسر سرعة آمن ومستقر، ونظام Windows 11 Pro أصلي ومفعل وجاهز للعب الفوري.
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- Actions Grid -->
+                        <div class="action-btns-grid">
+                            <button class="btn-add-cart-lg" onclick="addCurrentProductToCart()">
+                                <i class="fa-solid fa-cart-plus"></i> أضف إلى السلة
+                            </button>
+                            <a id="btnDirectWhatsApp" href="#" target="_blank" class="btn-wa-order-lg">
+                                <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i> طلب فوري عبر واتساب
+                            </a>
+                        </div>
+
+                        <!-- Policies -->
+                        <div class="policy-banner">
+                            <div class="policy-item"><i class="fa-solid fa-truck-fast"></i> <span>شحن مصفح مجاني</span></div>
+                            <div class="policy-item"><i class="fa-solid fa-shield-halved"></i> <span>ضمان سنتين واستبدال</span></div>
+                            <div class="policy-item"><i class="fa-solid fa-rotate-left"></i> <span>استرجاع خلال 14 يوم</span></div>
+                            <div class="policy-item"><i class="fa-solid fa-screwdriver-wrench"></i> <span>اختبار إجهاد مجاني</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div style="margin-top: 50px;">
+                <h3 style="font-size: 22px; font-weight: 900; color: #0f172a; margin-bottom: 22px;">عتاد وتجميعات مقترحة لك</h3>
+                <div class="pc-category-products-grid" id="relatedProductsGrid">
+                    <!-- Loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="pc-footer">
+        <div class="pc-container">
+            <div class="pc-footer-bottom" style="border-top:none; padding-top:0;">
+                <div class="pc-copy">© 2026 متجر سايبر تك PC (CyberTech). كافة الحقوق محفوظة ومسجلة رسمياً.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SLIDE-OUT CART DRAWER -->
+    <div class="pc-drawer-overlay" id="pcCartOverlay" onclick="togglePcCartDrawer()"></div>
+    <div class="pc-cart-drawer" id="pcCartDrawer">
+        <div class="pc-drawer-header">
+            <h3><i class="fa-solid fa-bag-shopping" style="color: var(--color-primary);"></i> سلة العتاد والتجميعات (<span id="pcCartCountHeader">0</span>)</h3>
+            <button class="pc-drawer-close" onclick="togglePcCartDrawer()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="pc-drawer-body" id="pcCartItemsContainer">
+            <div class="pc-cart-empty"><i class="fa-solid fa-cart-shopping"></i><h4>سلتك لا تزال فارغة</h4></div>
+        </div>
+        <div class="pc-drawer-footer">
+            <div class="pc-drawer-total"><span>الإجمالي المقدر:</span><span id="pcCartTotalSum" style="color: var(--color-primary); font-weight: 900;">0 ر.س</span></div>
+            <button class="pc-drawer-checkout" onclick="proceedPcCheckout()"><span>إتمام الطلب وتأكيد التجميع عبر واتساب</span><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="pc-toast" id="pcToast"><i class="fa-solid fa-circle-check" style="color: #22c55e; font-size: 18px;"></i><span id="pcToastMsg">تمت الإضافة بنجاح!</span></div>
+
+    <!-- Script for Product Loading -->
+    <script>
+    let currentProd = null;
+
+    async function initProductPage() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const prodId = parseInt(urlParams.get('id') || '1');
+
+        let products = [];
+        try {
+            const local = localStorage.getItem('techno_store_data');
+            if (local) {
+                const parsed = JSON.parse(local);
+                products = parsed.products || [];
+            }
+        } catch(e) {}
+
+        if (products.length === 0) {
+            try {
+                const res = await fetch('data/products.json?v=' + Date.now());
+                const data = await res.json();
+                products = data.products || [];
+            } catch(e) {}
+        }
+
+        currentProd = products.find(p => p.id === prodId) || products[0];
+        if (!currentProd) return;
+
+        const name = currentProd.name || currentProd.title || 'عتاد جيمنج احترافي';
+        document.getElementById('pageTitle').textContent = `${name} | سايبر تك PC`;
+        document.getElementById('prodBreadcrumbTitle').textContent = name;
+        document.getElementById('prodBreadcrumbCat').textContent = currentProd.categoryName || 'عتاد القيمنق';
+        document.getElementById('prodCategory').textContent = currentProd.categoryName || 'عتاد القيمنق';
+        document.getElementById('prodTitle').textContent = name;
+        document.getElementById('prodPrice').textContent = `${Number(currentProd.price).toLocaleString('en-US')} ر.س`;
+        document.getElementById('prodOldPrice').textContent = currentProd.oldPrice ? `${Number(currentProd.oldPrice).toLocaleString('en-US')} ر.س` : '';
+        document.getElementById('prodBadge').textContent = currentProd.badge || currentProd.discount || 'مميز';
+        document.getElementById('prodMainImg').src = currentProd.image || currentProd.img || 'images/pc_hero_rig_white.jpg';
+
+        const specsCont = document.getElementById('prodSpecsContainer');
+        if (specsCont) {
+            specsCont.innerHTML = (currentProd.specs || []).map(s => `<span class="spec-chip">${s}</span>`).join('');
+        }
+
+        // WhatsApp direct button
+        let waPhone = "201027093535";
+        try {
+            const localStore = JSON.parse(localStorage.getItem('techno_store_data') || '{}');
+            if (localStore && localStore.settings && localStore.settings.whatsappFormatted) {
+                waPhone = localStore.settings.whatsappFormatted;
+            }
+        } catch(e) {}
+
+        const waMsg = `مرحباً سايبر تك PC، أود طلب وشراء: *${name}* بسعر ${currentProd.price} ر.س. يرجى تأكيد التوفر وموعد الشحن.`;
+        document.getElementById('btnDirectWhatsApp').href = `https://wa.me/${waPhone}?text=${encodeURIComponent(waMsg)}`;
+
+        // Render Related Products
+        const related = products.filter(p => p.id !== currentProd.id).slice(0, 3);
+        const relatedGrid = document.getElementById('relatedProductsGrid');
+        if (relatedGrid) {
+            relatedGrid.innerHTML = related.map(p => {
+                const pName = p.name || p.title || 'عتاد جيمنج';
+                const pImg = p.image || p.img || 'images/pc_hero_rig_white.jpg';
+                return `
+                    <div class="pc-card">
+                        <span class="pc-card-badge">${p.badge || 'مميز'}</span>
+                        <a href="product?id=${p.id}" class="pc-card-img-box" style="text-decoration:none; display:flex;">
+                            <img decoding="async" src="${pImg}" alt="${pName}">
+                        </a>
+                        <div class="pc-card-body">
+                            <div>
+                                <div class="pc-card-cat">${p.categoryName || 'هاردوير'}</div>
+                                <h4 class="pc-card-title"><a href="product?id=${p.id}" style="color:inherit; text-decoration:none;">${pName}</a></h4>
+                            </div>
+                            <div>
+                                <div class="pc-card-pricing">
+                                    <span class="pc-price-current">${Number(p.price).toLocaleString('en-US')} ر.س</span>
+                                    ${p.oldPrice ? `<span class="pc-price-old">${Number(p.oldPrice).toLocaleString('en-US')} ر.س</span>` : ''}
+                                </div>
+                                <div class="pc-card-actions">
+                                    <button class="pc-btn-add" onclick="addPcToCart('${pName.replace(/'/g, "\\'")}', ${p.price}, '${pImg}')">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        <span>إضافة للسلة</span>
+                                    </button>
+                                    <a href="product?id=${p.id}" class="pc-btn-view">
+                                        <i class="fa-regular fa-eye"></i>
+                                        <span>عرض المنتج</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+    }
+
+    function addCurrentProductToCart() {
+        if (!currentProd) return;
+        const name = currentProd.name || currentProd.title;
+        const img = currentProd.image || currentProd.img;
+        addPcToCart(name, currentProd.price, img);
+    }
+
+    document.addEventListener('DOMContentLoaded', initProductPage);
+    </script>
+    <script src="js/store.js"></script>
+</body>
+</html>

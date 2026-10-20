@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا | متجر سايبر تك PC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .inner-hero { padding: 48px 0; background: linear-gradient(135deg, #090d16 0%, #1e1b4b 100%); color: #fff; text-align: center; }
+        .inner-hero h1 { font-size: 32px; font-weight: 900; margin-bottom: 12px; }
+        .inner-hero p { font-size: 16px; color: #c7d2fe; max-width: 700px; margin: 0 auto; line-height: 1.6; }
+        .contact-sec { padding: 60px 0; background: #fff; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; }
+        .info-card { background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 20px; padding: 32px; }
+        .info-row { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+        .info-icon { width: 48px; height: 48px; border-radius: 12px; background: #eef2ff; color: #4f46e5; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+        .info-text h4 { font-size: 16px; font-weight: 800; color: #0f172a; margin-bottom: 4px; }
+        .info-text p { font-size: 14.5px; color: #475569; line-height: 1.5; }
+        .form-card { background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 20px; padding: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; font-size: 14.5px; font-weight: 800; color: #1e293b; margin-bottom: 8px; }
+        .form-control { width: 100%; padding: 12px 16px; border: 1.5px solid #cbd5e1; border-radius: 12px; font-family: inherit; font-size: 14.5px; outline: none; }
+        .form-control:focus { border-color: #4f46e5; }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="pc-topbar">
+        <div class="pc-container">
+            <div class="pc-topbar-inner">
+                <div class="pc-topbar-text">
+                    <i class="fa-solid fa-bolt" style="color: var(--color-accent-amber);"></i>
+                    <span>عروض ألترا بي سي الكبرى: شحن مجاني لكافة التجميعات + ضمان استبدال فوري سنتين!</span>
+                </div>
+                <div class="pc-top-links">
+                    <a href="index.html#builder"><i class="fa-solid fa-screwdriver-wrench"></i> بناء تجميعة مخصصة</a>
+                    <a href="admin/index.html"><i class="fa-solid fa-lock"></i> لوحة الإدارة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="pc-header">
+        <div class="pc-container">
+            <div class="pc-header-main">
+                <a href="index.html" class="pc-logo-link">
+                    <div class="pc-logo-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="pc-logo-text"><span class="pc-logo-title">سايبر تك PC</span><span class="pc-logo-sub">CYBERTECH & GAMING STORE</span></div>
+                </a>
+                <div class="pc-header-actions" style="margin-right: auto;">
+                    <a href="admin/index.html" class="pc-action-btn" title="لوحة الإدارة" style="background: rgba(79, 70, 229, 0.12); color: #4f46e5; font-weight: 700; border-radius: 12px; border: 1px solid rgba(79, 70, 229, 0.3);"><i class="fa-solid fa-user-shield"></i></a>
+                    <div class="pc-action-btn" onclick="togglePcCartDrawer()"><i class="fa-solid fa-bag-shopping"></i><span>سلة العتاد</span><span class="pc-action-badge" id="pcCartBadge">0</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="pc-navbar">
+            <div class="pc-container">
+                <div class="pc-navbar-inner">
+                    <ul class="pc-nav-menu">
+                        <li class="pc-nav-item"><a href="category?cat=all" class="pc-nav-mega-btn"><i class="fa-solid fa-layer-group"></i> <span>كافة أقسام الهاردوير</span></a></li>
+                        <li class="pc-nav-item"><a href="index.html">الرئيسية</a></li>
+                        <li class="pc-nav-item"><a href="index.html#builder">بناء تجميعة مخصصة</a></li>
+                        <li class="pc-nav-item"><a href="shop.html">المتجر والقطع</a></li>
+                        <li class="pc-nav-item"><a href="about.html">من نحن</a></li>
+                        <li class="pc-nav-item"><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="inner-hero">
+        <div class="pc-container">
+            <h1>تواصل مع خبراء سايبر تك PC</h1>
+            <p>نحن هنا لمساعدتكم في اختيار القطع المتوافقة، تخصيص تجميعاتكم، وخدمات ما بعد البيع</p>
+        </div>
+    </section>
+
+    <section class="contact-sec">
+        <div class="pc-container">
+            <div class="contact-grid">
+                <div class="info-card">
+                    <h3 style="font-size:20px; font-weight:900; color:#0f172a; margin-bottom:24px;">معلومات التواصل والزيارة</h3>
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="info-text">
+                            <h4>المحادثة الفورية عبر واتساب</h4>
+                            <p style="direction:ltr; text-align:right; font-weight:700; color:#4f46e5;">+20 102 709 3535</p>
+                            <p style="font-size:12.5px; color:#64748b;">متاحون للرد السريع 24/7</p>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="info-text">
+                            <h4>الرقم الموحد المباشر</h4>
+                            <p style="font-weight:700;">800-PC-ULTRA</p>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="info-text">
+                            <h4>البريد الإلكتروني للدعم</h4>
+                            <p>support@cybertech-pc.com</p>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="info-text">
+                            <h4>المقر والمعرض الرئيسي</h4>
+                            <p>المملكة العربية السعودية - الرياض - طريق الملك فهد - مجمع التكنولوجيا</p>
+                        </div>
+                    </div>
+                    <div class="info-row" style="margin-bottom:0;">
+                        <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="info-text">
+                            <h4>ساعات العمل واستقبال العملاء</h4>
+                            <p>السبت - الخميس: من 10:00 صباحاً حتى 11:30 مساءً<br>الجمعة: من 2:00 ظهراً حتى 11:30 مساءً</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h3 style="font-size:20px; font-weight:900; color:#0f172a; margin-bottom:18px;">أرسل استفسارك مباشرة</h3>
+                    <form onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label>الاسم الكامل</label>
+                            <input type="text" id="contactName" class="form-control" required placeholder="أدخل اسمك الكريم">
+                        </div>
+                        <div class="form-group">
+                            <label>رقم الجوال أو الواتساب</label>
+                            <input type="tel" id="contactPhone" class="form-control" required placeholder="05xxxxxxxx">
+                        </div>
+                        <div class="form-group">
+                            <label>موضوع الاستفسار أو التجميعة المطلوبة</label>
+                            <textarea id="contactMsg" class="form-control" rows="4" required placeholder="اكتب تفاصيل التجميعة أو القطع التي ترغب في استشارتنا بشأنها..."></textarea>
+                        </div>
+                        <button type="submit" class="pc-btn-primary" style="width:100%; padding:14px; border-radius:12px; background:#4f46e5; color:#fff; border:none; font-weight:800; font-size:16px; cursor:pointer;">
+                            <i class="fa-brands fa-whatsapp"></i> إرسال عبر واتساب للمهندس المختص
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pc-footer">
+        <div class="pc-container">
+            <div class="pc-footer-bottom" style="border-top:none; padding-top:0;">
+                <div class="pc-copy">© 2026 متجر سايبر تك PC (CyberTech). كافة الحقوق محفوظة ومسجلة رسمياً.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    function handleContactSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('contactName').value;
+        const phone = document.getElementById('contactPhone').value;
+        const msg = document.getElementById('contactMsg').value;
+        const text = `مرحباً سايبر تك PC،\nالاسم: ${name}\nالجوال: ${phone}\nالاستفسار: ${msg}`;
+        window.open(`https://wa.me/201027093535?text=${encodeURIComponent(text)}`, '_blank');
+    }
+    </script>
+    <script src="js/store.js"></script>
+</body>
+</html>

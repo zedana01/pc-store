@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن | متجر سايبر تك PC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .inner-hero { padding: 48px 0; background: linear-gradient(135deg, #090d16 0%, #1e1b4b 100%); color: #fff; text-align: center; }
+        .inner-hero h1 { font-size: 32px; font-weight: 900; margin-bottom: 12px; }
+        .inner-hero p { font-size: 16px; color: #c7d2fe; max-width: 700px; margin: 0 auto; line-height: 1.6; }
+        .about-content-sec { padding: 60px 0; background: #fff; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .about-img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 2px solid #e2e8f0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 48px; }
+        .stat-card { background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 16px; padding: 24px; text-align: center; }
+        .stat-num { font-size: 34px; font-weight: 900; color: #4f46e5; margin-bottom: 6px; }
+        .stat-label { font-size: 14px; font-weight: 700; color: #475569; }
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } .stats-grid { grid-template-columns: 1fr 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="pc-topbar">
+        <div class="pc-container">
+            <div class="pc-topbar-inner">
+                <div class="pc-topbar-text">
+                    <i class="fa-solid fa-bolt" style="color: var(--color-accent-amber);"></i>
+                    <span>عروض ألترا بي سي الكبرى: شحن مجاني لكافة التجميعات + ضمان استبدال فوري سنتين!</span>
+                </div>
+                <div class="pc-top-links">
+                    <a href="index.html#builder"><i class="fa-solid fa-screwdriver-wrench"></i> بناء تجميعة مخصصة</a>
+                    <a href="admin/index.html"><i class="fa-solid fa-lock"></i> لوحة الإدارة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="pc-header">
+        <div class="pc-container">
+            <div class="pc-header-main">
+                <a href="index.html" class="pc-logo-link">
+                    <div class="pc-logo-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="pc-logo-text"><span class="pc-logo-title">سايبر تك PC</span><span class="pc-logo-sub">CYBERTECH & GAMING STORE</span></div>
+                </a>
+                <div class="pc-header-actions" style="margin-right: auto;">
+                    <a href="admin/index.html" class="pc-action-btn" title="لوحة الإدارة" style="background: rgba(79, 70, 229, 0.12); color: #4f46e5; font-weight: 700; border-radius: 12px; border: 1px solid rgba(79, 70, 229, 0.3);"><i class="fa-solid fa-user-shield"></i></a>
+                    <div class="pc-action-btn" onclick="togglePcCartDrawer()"><i class="fa-solid fa-bag-shopping"></i><span>سلة العتاد</span><span class="pc-action-badge" id="pcCartBadge">0</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="pc-navbar">
+            <div class="pc-container">
+                <div class="pc-navbar-inner">
+                    <ul class="pc-nav-menu">
+                        <li class="pc-nav-item"><a href="category?cat=all" class="pc-nav-mega-btn"><i class="fa-solid fa-layer-group"></i> <span>كافة أقسام الهاردوير</span></a></li>
+                        <li class="pc-nav-item"><a href="index.html">الرئيسية</a></li>
+                        <li class="pc-nav-item"><a href="index.html#builder">بناء تجميعة مخصصة</a></li>
+                        <li class="pc-nav-item"><a href="shop.html">المتجر والقطع</a></li>
+                        <li class="pc-nav-item"><a href="about.html">من نحن</a></li>
+                        <li class="pc-nav-item"><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="inner-hero">
+        <div class="pc-container">
+            <h1>من نحن في سايبر تك PC</h1>
+            <p>المرجع الأول لمحترفي الجيمنج ومحطات العمل والمونتاج في المملكة العربية السعودية</p>
+        </div>
+    </section>
+
+    <section class="about-content-sec">
+        <div class="pc-container">
+            <div class="about-grid">
+                <div>
+                    <span style="color:#4f46e5; font-weight:800; font-size:14px; display:block; margin-bottom:8px;">شغف حقيقي بالهاردوير</span>
+                    <h2 style="font-size:28px; font-weight:900; color:#0f172a; margin-bottom:16px;">نبني أجهزة خارقة بأعلى معايير الاستقرار الهندسي</h2>
+                    <p style="font-size:15px; color:#475569; line-height:1.8; margin-bottom:16px;">
+                        انطلق متجر سايبر تك PC من حب حقيقي لكسر السرعة وبناء أجهزة الكمبيوتر التي تجمع بين أقصى أداء ممكن والشكل الجمالي المبهر. نحن نؤمن بأن كل تجميعة هي تحفة فنية تتطلب عناية دقيقة بتدفق الهواء، إدارة الكيابل، والتوافق الحراري.
+                    </p>
+                    <p style="font-size:15px; color:#475569; line-height:1.8; margin-bottom:20px;">
+                        جميع أجهزتنا تخضع لاختبار إجهاد حراري صارم لمدة 48 ساعة قبل شحنها للعميل، مع ضمان محلي معتمد سنتين يشمل الاستبدال الفوري.
+                    </p>
+                    <a href="index.html#builder" class="pc-btn-primary" style="display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:12px; background:#4f46e5; color:#fff; text-decoration:none; font-weight:700;">
+                        <i class="fa-solid fa-screwdriver-wrench"></i> ابدأ بتجميع جهازك الآن
+                    </a>
+                </div>
+                <div>
+                    <img src="images/pc_hero_rig_white.jpg" alt="تجميعات ألترا بي سي" class="about-img">
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card"><div class="stat-num">+25,000</div><div class="stat-label">تجميعة تم بناؤها بنجاح</div></div>
+                <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">قطع أصلية وضمان معتمد</div></div>
+                <div class="stat-card"><div class="stat-num">48 ساعة</div><div class="stat-label">اختبار إجهاد حراري لكل جهاز</div></div>
+                <div class="stat-card"><div class="stat-num">24/7</div><div class="stat-label">دعم فني واستشارات متخصصة</div></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pc-footer">
+        <div class="pc-container">
+            <div class="pc-footer-bottom" style="border-top:none; padding-top:0;">
+                <div class="pc-copy">© 2026 متجر سايبر تك PC (CyberTech). كافة الحقوق محفوظة ومسجلة رسمياً.</div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/store.js"></script>
+</body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">أقسام الهاردوير | سايبر تك PC</title>
+    <meta name="description" content="تصفح أقوى تجميعات الجيمنج ولابتوبات المحترفين وكروت الشاشة وشاشات القيمنق بضمان الوكيل سنتين وشحن سريع من سايبر تك PC.">
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 Pro / Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. TOP ANNOUNCEMENT BAR -->
+    <div class="pc-topbar">
+        <div class="pc-container">
+            <div class="pc-topbar-inner">
+                <div class="pc-topbar-text">
+                    <i class="fa-solid fa-bolt" style="color: var(--color-accent-amber);"></i>
+                    <span>عروض ألترا بي سي الكبرى: شحن مجاني لكافة التجميعات + تركيب واختبار إجهاد Stress Test مجاناً وضمان سنتين!</span>
+                </div>
+                <div class="pc-top-links">
+                    <a href="index.html#builder"><i class="fa-solid fa-screwdriver-wrench"></i> بناء تجميعة مخصصة</a>
+                    <a href="admin/index.html"><i class="fa-solid fa-lock"></i> لوحة الإدارة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MAIN HEADER -->
+    <header class="pc-header">
+        <div class="pc-container">
+            <div class="pc-header-main">
+                <!-- Logo -->
+                <a href="index.html" class="pc-logo-link">
+                    <div class="pc-logo-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div class="pc-logo-text">
+                        <span class="pc-logo-title">سايبر تك PC</span>
+                        <span class="pc-logo-sub">CYBERTECH & GAMING STORE</span>
+                    </div>
+                </a>
+
+                <!-- Search Bar -->
+                <form class="pc-search-box" onsubmit="event.preventDefault(); searchCategoryProducts();">
+                    <input type="text" id="catSearchInput" class="pc-search-input" placeholder="ابحث عن تجميعة، كرت شاشة RTX 4090، شاشة OLED، أو معالج..." onkeyup="searchCategoryProducts()">
+                    <button type="submit" class="pc-search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>بحث</span>
+                    </button>
+                </form>
+
+                <!-- Actions -->
+                <div class="pc-header-actions">
+                    <a href="admin/index.html" class="pc-action-btn" title="لوحة التحكم الإدارية" style="background: rgba(79, 70, 229, 0.12); color: #4f46e5; font-weight: 700; border-radius: 12px; border: 1px solid rgba(79, 70, 229, 0.3);">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </a>
+                    <div class="pc-action-btn" onclick="showToast('تمت إضافة العتاد إلى قائمة التفضيلات ❤️')">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="pc-action-badge">3</span>
+                    </div>
+                    <div class="pc-action-btn" onclick="togglePcCartDrawer()">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>سلة العتاد</span>
+                        <span class="pc-action-badge" id="pcCartBadge">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="pc-navbar">
+            <div class="pc-container">
+                <div class="pc-navbar-inner">
+                    <ul class="pc-nav-menu">
+                        <li class="pc-nav-item">
+                            <a href="category?cat=all" class="pc-nav-mega-btn">
+                                <i class="fa-solid fa-layer-group"></i>
+                                <span>كافة أقسام الهاردوير</span>
+                            </a>
+                        </li>
+                        <li class="pc-nav-item"><a href="index.html">الرئيسية</a></li>
+                        <li class="pc-nav-item"><a href="index.html#builder">بناء تجميعة مخصصة</a></li>
+                        <li class="pc-nav-item"><a href="category?cat=rigs">تجميعات 4K</a></li>
+                        <li class="pc-nav-item"><a href="category?cat=laptops">لابتوبات المحترفين</a></li>
+                        <li class="pc-nav-item"><a href="category?cat=monitors">شاشات OLED</a></li>
+                        <li class="pc-nav-item"><a href="shop.html">المتجر والقطع</a></li>
+                        <li class="pc-nav-item"><a href="about.html">من نحن</a></li>
+                        <li class="pc-nav-item"><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                    <div class="pc-nav-hotline">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>الخط المباشر: <strong>800-PC-ULTRA</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. WIDE CATEGORY BANNER HERO -->
+    <section class="pc-cat-banner-section">
+        <div class="pc-container">
+            <div class="pc-cat-banner-card">
+                <img id="catBannerBg" class="pc-cat-banner-bg" src="images/pc_hero_rig_white.jpg" alt="بانر القسم العريض">
+                <div class="pc-cat-banner-overlay"></div>
+                <div class="pc-cat-banner-content">
+                    <div class="pc-cat-breadcrumb">
+                        <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <a href="category?cat=all">أقسام الهاردوير</a>
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <span id="catBreadcrumbTitle">تجميعات الجيمنج 4K</span>
+                    </div>
+                    <h1 class="pc-cat-banner-title" id="catTitle">تجميعات الجيمنج الاحترافية ودقة 4K فائقة</h1>
+                    <p class="pc-cat-banner-desc" id="catDesc">
+                        أقوى أجهزة الكمبيوتر المكتبية المجهزة بكروت RTX 4090 و 4080 Super مع تبريد مائي مخصص ومظهر أبيض فاخر واختبار إجهاد حراري شامل.
+                    </p>
+                    <div class="pc-cat-banner-stats">
+                        <span id="catCountBadge"><i class="fa-solid fa-boxes-stacked"></i> متوفر في هذا القسم</span>
+                        <span><i class="fa-solid fa-shield-halved"></i> ضمان سنتين واستبدال فوري</span>
+                        <span><i class="fa-solid fa-truck-fast"></i> شحن مصفح مجاني</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Category Switcher Chips -->
+            <div class="pc-cat-chips-bar">
+                <a href="category?cat=all" class="pc-cat-chip" data-cat="all">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>كل أجهزة الهاردوير</span>
+                </a>
+                <a href="category?cat=rigs" class="pc-cat-chip" data-cat="rigs">
+                    <i class="fa-solid fa-desktop"></i>
+                    <span>تجميعات 4K</span>
+                </a>
+                <a href="category?cat=laptops" class="pc-cat-chip" data-cat="laptops">
+                    <i class="fa-solid fa-laptop"></i>
+                    <span>لابتوبات المحترفين</span>
+                </a>
+                <a href="category?cat=monitors" class="pc-cat-chip" data-cat="monitors">
+                    <i class="fa-solid fa-tv"></i>
+                    <span>شاشات OLED</span>
+                </a>
+                <a href="category?cat=hardware" class="pc-cat-chip" data-cat="hardware">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>قطع وكروت شاشة</span>
+                </a>
+                <a href="category?cat=accessories" class="pc-cat-chip" data-cat="accessories">
+                    <i class="fa-solid fa-keyboard"></i>
+                    <span>ملحقات واكسسوارات</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. MAIN CATEGORY PRODUCTS SECTION -->
+    <section class="pc-section" style="padding-top: 10px; padding-bottom: 30px;">
+        <div class="pc-container">
+            <!-- Controls Bar -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 14px; background: #ffffff; padding: 14px 22px; border-radius: 16px; border: 1px solid var(--color-border); box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                <div style="font-size: 15px; font-weight: 800; color: var(--color-navy); display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-boxes-stacked" style="color: var(--color-primary); font-size: 17px;"></i>
+                    <span id="catProductsStatus">جاري تحميل عتاد هذا القسم...</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 13.5px; color: var(--color-muted); font-weight: 600;">ترتيب حسب:</span>
+                    <select id="sortSelect" onchange="sortCategoryProducts()" style="padding: 8px 14px; border: 1.5px solid var(--color-border); border-radius: 10px; font-family: inherit; font-size: 13px; font-weight: 700; outline: none; background: #f8fafc; cursor: pointer;">
+                        <option value="featured">الأكثر طلباً وتميزاً</option>
+                        <option value="price-asc">السعر: من الأقل للأعلى</option>
+                        <option value="price-desc">السعر: من الأعلى للأقل</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid Container (Normalized Layout) -->
+            <div class="pc-category-products-grid" id="categoryProductsGrid">
+                <!-- Dynamically populated with normalized cards -->
+            </div>
+
+            <!-- Recommendations Section for richer experience -->
+            <div id="recommendationsWrapper" style="margin-top: 40px; padding-top: 36px; border-top: 1.5px solid #e2e8f0;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <div>
+                        <span style="font-size: 13px; font-weight: 700; color: var(--color-primary); display: block; margin-bottom: 4px;">ترشيحات خبراء الهاردوير</span>
+                        <h3 style="font-size: 20px; font-weight: 900; color: var(--color-navy);">عتاد وأجهزة مختارة من الأقسام الأخرى</h3>
+                    </div>
+                    <a href="shop.html" class="btn-pc-outline" style="padding: 8px 16px; font-size: 13px; text-decoration: none; border-radius: 10px; border: 1.5px solid #cbd5e1; color: #334155; font-weight: 700;">
+                        <span>تصفح كل المتجر</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="pc-category-products-grid" id="recommendationsGrid">
+                    <!-- Populated with cross-category recommendations -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER -->
+    <footer class="pc-footer">
+        <div class="pc-container">
+            <div class="pc-footer-grid">
+                <div class="pc-footer-col">
+                    <div class="pc-logo-link" style="margin-bottom: 16px;">
+                        <div class="pc-logo-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <div class="pc-logo-text"><span class="pc-logo-title">سايبر تك PC</span><span class="pc-logo-sub">CYBERTECH & GAMING STORE</span></div>
+                    </div>
+                    <p class="pc-footer-desc">
+                        الوجهة السعودية الأولى لتجميعات القيمنق ومحطات العمل الخارقة وقطع الهاردوير الأصلية. نهندس أجهزتك بأعلى معايير الاستقرار والسرعة مع ضمان محلي معتمد سنتين.
+                    </p>
+                    <div class="pc-social-links">
+                        <a href="#" class="pc-social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="pc-social-btn"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="pc-social-btn"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#" class="pc-social-btn"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="pc-footer-col">
+                    <h4 class="pc-footer-heading">أقسام الهاردوير</h4>
+                    <ul class="pc-footer-links">
+                        <li><a href="category?cat=rigs">تجميعات الجيمنج 4K</a></li>
+                        <li><a href="category?cat=laptops">لابتوبات المحترفين والمونتاج</a></li>
+                        <li><a href="category?cat=monitors">شاشات OLED المنحنية</a></li>
+                        <li><a href="category?cat=hardware">كروت الشاشة والمعالجات</a></li>
+                        <li><a href="category?cat=accessories">ملحقات وكيبوردات ميكانيكية</a></li>
+                    </ul>
+                </div>
+
+                <div class="pc-footer-col">
+                    <h4 class="pc-footer-heading">خدمات العملاء والضمان</h4>
+                    <ul class="pc-footer-links">
+                        <li><a href="about.html">من نحن وقصة ألترا بي سي</a></li>
+                        <li><a href="contact.html">تواصل مع مهندسينا وفروعنا</a></li>
+                        <li><a href="index.html#builder">بناء تجميعة كمبيوتر مخصصة</a></li>
+                        <li><a href="admin/index.html">لوحة تحكم المتجر</a></li>
+                    </ul>
+                </div>
+
+                <div class="pc-footer-col">
+                    <h4 class="pc-footer-heading">نشرة العروض والخصومات</h4>
+                    <p class="pc-footer-desc" style="margin-bottom: 14px;">اشترك ليصلك إشعار فوري عند توفر كروت الشاشة والتجميعات بأسعار مخفضة:</p>
+                    <form onsubmit="event.preventDefault(); showToast('تم اشتراكك بنجاح في نشرة عروض سايبر تك! 🎉');" style="display: flex; gap: 8px;">
+                        <input type="email" required placeholder="بريدك الإلكتروني..." style="flex: 1; padding: 10px 14px; border-radius: 10px; border: 1.5px solid var(--color-border); font-family: inherit; font-size: 13px; outline: none;">
+                        <button type="submit" class="pc-btn-primary" style="padding: 10px 18px; border-radius: 10px; font-size: 13px; background: #4f46e5; color:#fff; border:none; font-weight:700; cursor:pointer;">اشتراك</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pc-footer-bottom">
+                <div class="pc-copy">
+                    © 2026 متجر سايبر تك PC (CyberTech). كافة الحقوق محفوظة ومسجلة رسمياً.
+                </div>
+                <div class="pc-payment-methods">
+                    <span class="pc-pay-badge">مدى Mada</span>
+                    <span class="pc-pay-badge">Visa / Mastercard</span>
+                    <span class="pc-pay-badge">Apple Pay</span>
+                    <span class="pc-pay-badge">Tabby تابي</span>
+                    <span class="pc-pay-badge">Tamara تمارا</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SLIDE-OUT CART DRAWER -->
+    <div class="pc-drawer-overlay" id="pcCartOverlay" onclick="togglePcCartDrawer()"></div>
+    <div class="pc-cart-drawer" id="pcCartDrawer">
+        <div class="pc-drawer-header">
+            <h3><i class="fa-solid fa-bag-shopping" style="color: var(--color-primary);"></i> سلة العتاد والتجميعات (<span id="pcCartCountHeader">0</span>)</h3>
+            <button class="pc-drawer-close" onclick="togglePcCartDrawer()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="pc-drawer-body" id="pcCartItemsContainer">
+            <div class="pc-cart-empty">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h4>سلتك لا تزال فارغة</h4>
+                <p>تصفح عتاد هذا القسم وأضفه إلى السلة بسهولة</p>
+            </div>
+        </div>
+        <div class="pc-drawer-footer">
+            <div class="pc-drawer-total">
+                <span>الإجمالي المقدر:</span>
+                <span id="pcCartTotalSum" style="color: var(--color-primary); font-weight: 900;">0 ر.س</span>
+            </div>
+            <button class="pc-drawer-checkout" onclick="proceedPcCheckout()">
+                <span>إتمام الطلب وتأكيد التجميع عبر واتساب</span>
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="pc-toast" id="pcToast">
+        <i class="fa-solid fa-circle-check" style="color: #22c55e; font-size: 18px;"></i>
+        <span id="pcToastMsg">تمت الإضافة بنجاح!</span>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201027093535" target="_blank" class="tech-floating-whatsapp" style="position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; background: #25d366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5); z-index: 9999; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="تواصل عبر واتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Category Engine Script -->
+    <script>
+    const categoryMetadata = {
+        'rigs': {
+            name: 'تجميعات الجيمنج 4K',
+            banner: 'images/pc_hero_rig_white.jpg',
+            title: 'تجميعات الجيمنج الاحترافية ودقة 4K فائقة',
+            desc: 'أقوى أجهزة الكمبيوتر المكتبية المجهزة بكروت RTX 4090 و 4080 Super مع تبريد مائي مخصص ومظهر أبيض فاخر واختبار إجهاد حراري شامل.'
+        },
+        'laptops': {
+            name: 'لابتوبات المحترفين والمونتاج',
+            banner: 'images/pc_hero_laptop_white.jpg',
+            title: 'لابتوبات الجيمنج والمونتاج والهندسة',
+            desc: 'قوة الحواسيب المكتبية في هيكل ألمنيوم فائق النحافة مع شاشات OLED بدقة 4K ومعدل تحديث يصل إلى 240Hz وبطاريات تدوم طويلاً.'
+        },
+        'monitors': {
+            name: 'شاشات العرض والـ OLED',
+            banner: 'images/pc_hero_monitor_white.jpg',
+            title: 'شاشات القيمنق المنحنية و QD-OLED السينمائية',
+            desc: 'انغماس بصري لا مثيل له مع معدلات تحديث 240Hz وزمن استجابة فائق 0.03ms ودعم كامل لتقنيات G-Sync Ultimate.'
+        },
+        'hardware': {
+            name: 'قطع الهاردوير وكروت الشاشة',
+            banner: 'images/cat_banner_hardware.jpg',
+            title: 'أحدث كروت الشاشة والمعالجات ومزودات الطاقة',
+            desc: 'قطع الهاردوير الأصلية بضمان الوكيل المعتمد لترقية جهازك والحصول على أعلى معدلات الإطارات FPS وثبات تام في كسر السرعة.'
+        },
+        'accessories': {
+            name: 'ملحقات واكسسوارات الجيمنج',
+            banner: 'images/cat_banner_accessories.jpg',
+            title: 'كيبوردات ميكانيكية وماوسات وسماعات محيطية',
+            desc: 'ملحقات الجيمنج الاحترافية بسويتشات ميكانيكية مخصصة ومستشعرات ضوئية بالغة الدقة لتفوقك في المنافسات التنافسية.'
+        },
+        'all': {
+            name: 'كافة أجهزة الهاردوير',
+            banner: 'images/pc_hero_rig_white.jpg',
+            title: 'كافة أجهزة الكمبيوتر والتجميعات وقطع الهاردوير',
+            desc: 'استكشف تشكيلة ألترا بي سي الكاملة من أجهزة القيمنق الخارقة ولابتوبات المحترفين والشاشات بضمان الوكيل وشحن فوري.'
+        }
+    };
+
+    let allProducts = [];
+    let currentCat = 'all';
+
+    function getParam(key) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(key);
+    }
+
+    function matchCategory(p, cat) {
+        if (!cat || cat === 'all') return true;
+        const target = (cat || '').toLowerCase().trim();
+        const pCat = (p.category || '').toLowerCase().trim();
+        const pCatName = (p.categoryName || '').toLowerCase().trim();
+        const pName = (p.name || p.title || '').toLowerCase().trim();
+
+        if (target === 'rigs') {
+            return pCat === 'rigs' || pCat === 'gaming_pc' || pCatName.includes('تجميع') || pName.includes('تجميع') || pName.includes('كمبيوتر') || pName.includes('ريج');
+        }
+        if (target === 'laptops') {
+            return pCat === 'laptops' || pCatName.includes('لابتوب') || pName.includes('لابتوب') || pName.includes('إيثر');
+        }
+        if (target === 'monitors') {
+            return pCat === 'monitors' || pCatName.includes('شاش') || pName.includes('شاش') || pName.includes('oled');
+        }
+        if (target === 'hardware') {
+            return pCat === 'hardware' || pCat === 'gpus' || pCat === 'cpus' || pCatName.includes('كرت') || pCatName.includes('معالج') || pName.includes('كرت') || pName.includes('معالج') || pName.includes('rtx');
+        }
+        if (target === 'accessories') {
+            return pCat === 'accessories' || pCatName.includes('ملحق') || pCatName.includes('كيبورد') || pName.includes('كيبورد') || pName.includes('سماع') || pName.includes('ماوس');
+        }
+        return pCat === target;
+    }
+
+    async function loadDataAndInit() {
+        const param = getParam('cat') || 'all';
+        currentCat = param.toLowerCase();
+
+        // 1. Try local storage (admin changes)
+        try {
+            const local = localStorage.getItem('techno_store_data');
+            if (local) {
+                const parsed = JSON.parse(local);
+                if (parsed && Array.isArray(parsed.products) && parsed.products.length > 0) {
+                    allProducts = parsed.products;
+                }
+            }
+        } catch (e) {}
+
+        // 2. Try fetching data/products.json if available
+        if (allProducts.length === 0) {
+            try {
+                const res = await fetch('data/products.json?v=' + Date.now());
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data && Array.isArray(data.products) && data.products.length > 0) {
+                        allProducts = data.products;
+                    }
+                }
+            } catch (e) {}
+        }
+
+        renderCategoryHeader(currentCat);
+        highlightActiveChip(currentCat);
+        renderProducts(currentCat);
+        renderRecommendations(currentCat);
+        if (typeof updatePcCartUI === 'function') {
+            updatePcCartUI();
+        }
+    }
+
+    function renderCategoryHeader(cat) {
+        const meta = categoryMetadata[cat] || categoryMetadata['all'];
+        document.getElementById('pageTitle').textContent = meta.name + ' | سايبر تك PC';
+        document.getElementById('catBannerBg').src = meta.banner;
+        document.getElementById('catBreadcrumbTitle').textContent = meta.name;
+        document.getElementById('catTitle').textContent = meta.title;
+        document.getElementById('catDesc').textContent = meta.desc;
+    }
+
+    function highlightActiveChip(cat) {
+        document.querySelectorAll('.pc-cat-chip').forEach(chip => {
+            const chipCat = chip.getAttribute('data-cat');
+            if (chipCat === cat) {
+                chip.classList.add('active');
+            } else {
+                chip.classList.remove('active');
+            }
+        });
+    }
+
+    function createProductCardHTML(p) {
+        const specsHtml = (p.specs || []).slice(0, 3).map(s => `<span class="pc-spec-tag">${s}</span>`).join('');
+        const name = p.name || p.title || 'عتاد جيمنج احترافي';
+        const escapedName = name.replace(/'/g, "\\'");
+        const img = p.image || p.img || 'images/pc_hero_rig_white.jpg';
+
+        return `
+            <div class="pc-card">
+                <span class="pc-card-badge">${p.badge || p.tag || 'مميز'}</span>
+                <a href="product?id=${p.id}" class="pc-card-img-box" style="text-decoration:none; display:flex;">
+                    <img decoding="async" src="${img}" alt="${name}" onerror="this.onerror=null; this.src='images/pc_hero_rig_white.jpg';">
+                </a>
+                <div class="pc-card-body">
+                    <div>
+                        <div class="pc-card-cat">${p.categoryName || 'هاردوير وعتاد'}</div>
+                        <h4 class="pc-card-title">
+                            <a href="product?id=${p.id}" style="color:inherit; text-decoration:none; display:inline-block; transition:color 0.2s;" onmouseover="this.style.color='#4f46e5'" onmouseout="this.style.color='inherit'">
+                                ${name}
+                            </a>
+                        </h4>
+                        <div class="pc-card-specs">
+                            ${specsHtml}
+                        </div>
+                        <div class="pc-card-stock" style="margin-top: 8px;">
+                            <div class="pc-stock-bar"><div class="pc-stock-fill" style="width: 85%;"></div></div>
+                            <span>متوفر وجاهز للشحن الفوري</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pc-card-pricing" style="margin-top: 10px;">
+                            <span class="pc-price-current">${Number(p.price).toLocaleString('en-US')} ر.س</span>
+                            ${p.oldPrice ? `<span class="pc-price-old">${Number(p.oldPrice).toLocaleString('en-US')} ر.س</span>` : ''}
+                        </div>
+                        <div class="pc-card-actions">
+                            <button class="pc-btn-add" onclick="addPcToCart('${escapedName}', ${p.price}, '${img}')">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>إضافة للسلة</span>
+                            </button>
+                            <a href="product?id=${p.id}" class="pc-btn-view">
+                                <i class="fa-regular fa-eye"></i>
+                                <span>عرض المنتج</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    function renderProducts(cat, searchTerm = '') {
+        const grid = document.getElementById('categoryProductsGrid');
+        let filtered = allProducts.filter(p => matchCategory(p, cat));
+
+        if (searchTerm) {
+            const term = searchTerm.trim().toLowerCase();
+            filtered = filtered.filter(p => (p.name || p.title || '').toLowerCase().includes(term) || (p.categoryName || '').toLowerCase().includes(term));
+        }
+
+        // Update badge and status
+        const countBadge = document.getElementById('catCountBadge');
+        if (countBadge) {
+            countBadge.innerHTML = `<i class="fa-solid fa-boxes-stacked"></i> ${filtered.length} أجهزة معتمدة متوفرة`;
+        }
+        const statusEl = document.getElementById('catProductsStatus');
+        if (statusEl) {
+            statusEl.textContent = `تم العثور على ${filtered.length} جهاز في هذا القسم`;
+        }
+
+        if (filtered.length === 0) {
+            grid.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 50px 20px; background: #ffffff; border-radius: 20px; border: 1.5px dashed var(--color-border); width: 100%;">
+                    <i class="fa-solid fa-magnifying-glass" style="font-size: 46px; color: var(--color-muted); margin-bottom: 14px;"></i>
+                    <h3 style="font-size: 19px; color: var(--color-navy); margin-bottom: 8px;">لم نجد قطع مطابقة للبحث في هذا القسم</h3>
+                    <p style="color: var(--color-muted); font-size: 14px; margin-bottom: 18px;">جرب تصفح الأقسام الأخرى أو عرض كافة التجميعات</p>
+                    <a href="category?cat=all" class="pc-btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 12px; background:#4f46e5; color:#fff; text-decoration:none; font-weight:700;">
+                        <i class="fa-solid fa-layer-group"></i> عرض كل أجهزة المتجر
+                    </a>
+                </div>
+            `;
+            return;
+        }
+
+        grid.innerHTML = filtered.map(p => createProductCardHTML(p)).join('');
+    }
+
+    function renderRecommendations(cat) {
+        const recGrid = document.getElementById('recommendationsGrid');
+        const recWrapper = document.getElementById('recommendationsWrapper');
+        if (!recGrid) return;
+
+        let others = allProducts.filter(p => !matchCategory(p, cat));
+        if (others.length === 0) others = allProducts.slice(0, 3);
+        const selected = others.slice(0, 3);
+        if (selected.length === 0) {
+            if (recWrapper) recWrapper.style.display = 'none';
+            return;
+        }
+
+        if (recWrapper) recWrapper.style.display = 'block';
+        recGrid.innerHTML = selected.map(p => createProductCardHTML(p)).join('');
+    }
+
+    function searchCategoryProducts() {
+        const input = document.getElementById('catSearchInput');
+        if (!input) return;
+        renderProducts(currentCat, input.value);
+    }
+
+    function sortCategoryProducts() {
+        const val = document.getElementById('sortSelect').value;
+        if (val === 'price-asc') {
+            allProducts.sort((a, b) => a.price - b.price);
+        } else if (val === 'price-desc') {
+            allProducts.sort((a, b) => b.price - a.price);
+        } else {
+            allProducts.sort((a, b) => (a.id || 0) - (b.id || 0));
+        }
+        renderProducts(currentCat);
+    }
+
+    document.addEventListener('DOMContentLoaded', loadDataAndInit);
+    </script>
+
+    <script src="js/store.js"></script>
+</body>
+</html>
