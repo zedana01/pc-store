@@ -2020,19 +2020,18 @@
     font-size: 14px;
 }
 
-/* Category Products Grid */
+/* Category Products Grid (Exact 4 Columns on Desktop, Responsive & Full Width) */
 .pc-category-products-grid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 340px)) !important;
-    gap: 24px !important;
-    justify-content: start !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
     align-items: stretch !important;
     width: 100% !important;
     margin-bottom: 40px !important;
 }
 .pc-category-products-grid .pc-card {
     width: 100% !important;
-    max-width: 340px !important;
+    max-width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -2050,11 +2049,32 @@
     border-color: #4f46e5 !important;
     box-shadow: 0 12px 28px rgba(79, 70, 229, 0.18) !important;
 }
-@media (max-width: 640px) {
+.pc-category-products-grid .pc-card-actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+}
+.pc-category-products-grid .pc-card-actions .pc-btn-add,
+.pc-category-products-grid .pc-card-actions .pc-btn-view {
+    padding: 9px 6px !important;
+    font-size: 12.5px !important;
+    gap: 5px !important;
+}
+@media (max-width: 1180px) {
+    .pc-category-products-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 18px !important;
+    }
+}
+@media (max-width: 840px) {
+    .pc-category-products-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+    }
+}
+@media (max-width: 560px) {
     .pc-category-products-grid {
         grid-template-columns: 1fr !important;
-    }
-    .pc-category-products-grid .pc-card {
-        max-width: 100% !important;
+        gap: 16px !important;
     }
 }
